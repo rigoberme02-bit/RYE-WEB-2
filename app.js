@@ -24,15 +24,16 @@
     if (!paused && !document.hidden && !isDialogOpen()) timer = setInterval(() => show(current + 1), interval);
   }
   function updatePlay() {
+    if (!play) return;
     play.setAttribute('aria-label', paused ? 'Reanudar carrusel' : 'Pausar carrusel');
     play.innerHTML = paused ? '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="m6 4 10 6-10 6Z" fill="currentColor"/></svg>' : '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M6 5v10M14 5v10" stroke="currentColor" stroke-width="2.5"/></svg>';
   }
   dots.forEach(dot => dot.addEventListener('click', () => { show(Number(dot.dataset.go)); schedule(); }));
-  play.addEventListener('click', () => { paused = !paused; updatePlay(); schedule(); });
+  if (play) play.addEventListener('click', () => { paused = !paused; updatePlay(); schedule(); });
   document.addEventListener('visibilitychange', schedule);
   reduced.addEventListener('change', () => { if (reduced.matches) { paused = true; updatePlay(); schedule(); hero.style.removeProperty('--mx'); hero.style.removeProperty('--my'); } });
   const carousel = document.querySelector('.carousel');
-  carousel.addEventListener('keydown', e => { if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { e.preventDefault(); show(current + (e.key === 'ArrowRight' ? 1 : -1)); schedule(); dots[current].focus(); } });
+  carousel.addEventListener('keydown', e => { if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { e.preventDefault(); show(current + (e.key === 'ArrowRight' ? 1 : -1)); schedule(); if (dots[current]) dots[current].focus(); } });
   carousel.addEventListener('touchstart', e => { touchStart = { x:e.changedTouches[0].clientX, y:e.changedTouches[0].clientY }; }, {passive:true});
   carousel.addEventListener('touchend', e => { if (!touchStart) return; const dx=e.changedTouches[0].clientX-touchStart.x, dy=e.changedTouches[0].clientY-touchStart.y; if(Math.abs(dx)>50 && Math.abs(dx)>Math.abs(dy)){show(current+(dx<0?1:-1));schedule();}touchStart=null; }, {passive:true});
   hero.addEventListener('pointermove', e => { if (reduced.matches || !finePointer.matches) return; const r=hero.getBoundingClientRect(); hero.style.setProperty('--mx', `${((e.clientX-r.left)/r.width-.5)*20}px`); hero.style.setProperty('--my', `${((e.clientY-r.top)/r.height-.5)*20}px`); }, {passive:true});
@@ -44,8 +45,12 @@
   document.addEventListener('click', e=>{if(!nav.contains(e.target)&&!menu.contains(e.target))closeMenu();});
   const contact = document.querySelector('#contact-dialog'), about = document.querySelector('#about-dialog'), form = document.querySelector('#contact-form'), result = document.querySelector('#message-result'), status = document.querySelector('#form-status');
   let previousFocus = null;
-  const number = String(config.whatsappNumber || '').replace(/\D/g,'');
+  const rawNumber = String(config.whatsappNumber || '593993046031').replace(/\D/g,'');
+  const number = rawNumber.startsWith('0') ? '593' + rawNumber.slice(1) : rawNumber;
   const hasWhatsApp = /^\d{8,15}$/.test(number);
+  document.querySelectorAll('a.whatsapp, a.whatsapp-banner').forEach(link => {
+    if (hasWhatsApp) link.href = `https://wa.me/${number}`;
+  });
   function openDialog(dialog){previousFocus=document.activeElement;dialogs.forEach(d=>{if(d.open)d.close();});closeMenu();dialog.showModal();document.body.style.overflow='hidden';schedule();}
   function openContact(service='Orientación general'){
     form.reset();form.elements.service.value=service;result.hidden=true;status.textContent='';
@@ -64,7 +69,18 @@
   form.addEventListener('submit',e=>{e.preventDefault();if(!form.reportValidity())return;
     const data=new FormData(form);const text=`Hola, RYE. Soy ${String(data.get('name')).trim()}.\nMe interesa: ${data.get('service')}.\nMi contacto: ${String(data.get('contact')).trim()}.\n\n${String(data.get('message')).trim()}`;
     document.querySelector('#prepared-message').value=text;result.hidden=false;
-    if(hasWhatsApp){window.open(`https://wa.me/${number}?text=${encodeURIComponent(text)}`,'_blank','noopener,noreferrer');status.textContent='Se abrió WhatsApp. Revisa el mensaje y envíalo cuando esté listo.';}
+    if(hasWhatsApp){
+      try {
+        const win = window.open(`https://wa.me/${number}?text=${encodeURIComponent(text)}`,'_blank','noopener,noreferrer');
+        if (!win) {
+          status.textContent='Mensaje preparado. Puedes copiarlo abajo para enviarlo por WhatsApp.';
+        } else {
+          status.textContent='Se abrió WhatsApp. Revisa el mensaje y envíalo cuando esté listo.';
+        }
+      } catch (err) {
+        status.textContent='Mensaje preparado. Copia el texto abajo para enviarlo.';
+      }
+    }
     else {status.textContent='Mensaje preparado. Todavía no se ha enviado.';document.querySelector('#copy-message').focus();}
   });
   document.querySelector('#copy-message').addEventListener('click',async()=>{const field=document.querySelector('#prepared-message');try{if(!navigator.clipboard)throw new Error('Clipboard unavailable');await navigator.clipboard.writeText(field.value);status.textContent='Mensaje copiado. Puedes pegarlo en tu conversación con RYE.';}catch{field.focus();field.select();status.textContent='Seleccionamos el mensaje: presiona Ctrl+C o mantén pulsado para copiarlo.';}});
