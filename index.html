@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#002650">
+  <meta name="description" content="RYE Desarrollo Humano. Evaluaciones, terapias y acompañamiento personalizado para cada etapa. Kennedy Nueva, Guayaquil.">
+  <title>RYE · Desarrollo Humano</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23002650'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Arial' font-weight='bold' font-size='44' fill='%23ff792b'%3ER%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@1,700;1,800&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main>
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="atmosphere" aria-hidden="true"><div class="glow glow-one"></div><div class="glow glow-two"></div><div class="facet"></div><div class="arc arc-one"></div><div class="arc arc-two"></div></div>
+      <header class="header">
+        <a class="brand" href="#inicio" aria-label="RYE Desarrollo Humano, inicio"><img src="assets/logo.png" alt="RYE Desarrollo Humano" width="1600" height="960" fetchpriority="high"></a>
+        <button class="menu-toggle" aria-label="Abrir menú" aria-controls="main-nav" aria-expanded="false"><span></span><span></span></button>
+        <nav class="navigation" id="main-nav" aria-label="Navegación principal">
+          <button data-service="Evaluaciones">Evaluaciones</button><button data-service="Terapias">Terapias</button><button data-service="Talleres">Talleres</button><button data-about>Nosotros</button>
+        </nav>
+        <button class="whatsapp" data-contact aria-label="Contactar con RYE por WhatsApp"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M26.5 5.5A14 14 0 0 0 4.3 22L2 30l8.2-2.2A14 14 0 0 0 26.5 5.5Z" stroke="currentColor" stroke-width="2.2"/><path d="M11 8c-.8-.4-2 .1-2.5 1.2-1.2 2.6 1.8 6.6 4.5 9 2.7 2.3 7 4.4 9 2.6.8-.7 1.3-2.1.8-2.8l-3.5-1.7c-.6-.2-1.2 1.7-1.9 1.5-2.4-.8-5-3.2-5.8-5.3-.2-.6 1.4-1.2 1.3-1.9L11 8Z" fill="currentColor"/></svg><span>WhatsApp</span></button>
+      </header>
+      <div class="eyebrow"><span aria-hidden="true"></span>Psicopedagogía y neuropsicología en Guayaquil</div>
+      <h1 id="hero-title"><span class="title-first">EVALUACIÓN Y <span class="blue-gradient">ORIENTACIÓN</span></span><span class="title-serif">PARA POTENCIAR</span><span class="title-last">TU DESARROLLO</span></h1>
+      <p class="description">Evaluaciones, terapias y acompañamiento<br class="desktop-break"> personalizado para cada etapa.</p>
+      <div class="experience" aria-label="Más de 20 años de experiencia"><span class="experience-intro">Más de:</span><strong>20</strong><span class="experience-caption">Años de<br>experiencia</span></div>
+      <div class="carousel" role="region" aria-roledescription="carrusel" aria-label="Conoce RYE Desarrollo Humano">
+        <div class="slide is-active" data-slide="0" role="group" aria-roledescription="diapositiva" aria-label="1 de 3: recepción de RYE"><img src="assets/clinic_recepcion.jpg" alt="Recepción de RYE Desarrollo Humano, con mostrador naranja y el logo de la clínica" width="720" height="1600" fetchpriority="high"></div>
+        <div class="slide" data-slide="1" role="group" aria-roledescription="diapositiva" aria-label="2 de 3: espacio de actividades" aria-hidden="true"><img src="assets/clinic_tomatis.jpg" alt="Espacio de actividades de RYE con mesa, sillas y materiales didácticos" width="720" height="1600"></div>
+        <div class="slide founders" data-slide="2" role="group" aria-roledescription="diapositiva" aria-label="3 de 3: Rigoberto y Erika" aria-hidden="true"><img src="assets/founders_rigoberto_erika.jpg" alt="Rigoberto y Erika, fundadores de RYE Desarrollo Humano" width="1264" height="841"></div>
+        <div class="carousel-controls"><div class="slide-dots" role="group" aria-label="Seleccionar fotografía"><button class="is-active" data-go="0" aria-label="Ver recepción" aria-pressed="true"></button><button data-go="1" aria-label="Ver espacio de actividades" aria-pressed="false"></button><button data-go="2" aria-label="Ver a Rigoberto y Erika" aria-pressed="false"></button></div><button class="play-toggle" aria-label="Pausar carrusel"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M6 5v10M14 5v10" stroke="currentColor" stroke-width="2.5"/></svg></button></div>
+        <a class="location" href="https://www.google.com/maps/search/?api=1&query=Kennedy+Nueva+Guayaquil" target="_blank" rel="noopener noreferrer" aria-label="Ver el sector Kennedy Nueva, Guayaquil, en Google Maps"><span aria-hidden="true"></span>KENNEDY NUEVA - GUAYAQUIL</a>
+      </div>
+    </section>
+  </main>
+  <dialog class="contact-dialog" id="contact-dialog" aria-labelledby="contact-title">
+    <button class="dialog-close" data-close aria-label="Cerrar ventana">×</button>
+    <p class="dialog-kicker">RYE · DESARROLLO HUMANO</p><h2 id="contact-title">Conversemos</h2>
+    <p class="dialog-description" id="contact-description">Cuéntanos qué necesitas y prepara tu consulta.</p>
+    <form id="contact-form">
+      <label>Tu nombre<input name="name" autocomplete="given-name" required maxlength="80" placeholder="Escribe tu nombre"></label>
+      <label>Correo o teléfono<input name="contact" autocomplete="email" required maxlength="120" placeholder="¿Cómo podemos contactarte?"></label>
+      <label>Me interesa<select name="service"><option>Orientación general</option><option>Evaluaciones</option><option>Terapias</option><option>Talleres</option></select></label>
+      <label>Tu mensaje<textarea name="message" rows="3" required maxlength="1500" placeholder="Cuéntanos brevemente el motivo de tu consulta"></textarea></label>
+      <button class="submit-button" type="submit">Preparar mensaje</button>
+    </form>
+    <div id="message-result" hidden><label>Tu mensaje listo para copiar<textarea id="prepared-message" rows="7" readonly></textarea></label><button class="submit-button" id="copy-message">Copiar mensaje</button><p class="form-status" role="status" id="form-status"></p></div>
+  </dialog>
+  <dialog class="about-dialog" id="about-dialog" aria-labelledby="about-title"><button class="dialog-close" data-close aria-label="Cerrar ventana">×</button><img src="assets/founders_rigoberto_erika.jpg" alt="Rigoberto y Erika" width="1264" height="841"><div class="about-content"><p class="dialog-kicker">RYE · DESARROLLO HUMANO</p><h2 id="about-title">Rigoberto y Erika</h2><p>Más de 20 años de experiencia. Evaluaciones, terapias y acompañamiento personalizado para cada etapa.</p><p>Kennedy Nueva, Guayaquil.</p><button class="submit-button" data-contact>Preparar una consulta</button></div></dialog>
+</body>
+</html>
