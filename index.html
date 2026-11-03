@@ -4,10 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#002650">
-  <meta name="description" content="RYE Desarrollo Humano. Evaluaciones, terapias y acompañamiento personalizado para cada etapa. Kennedy Nueva, Guayaquil.">
-  <meta property="og:title" content="RYE · Desarrollo Humano">
-  <meta property="og:description" content="RYE Desarrollo Humano. Evaluaciones, terapias y acompañamiento personalizado para cada etapa. Kennedy Nueva, Guayaquil.">
-  <title>RYE · Desarrollo Humano</title>
+  <meta name="description" content="RYE Desarrollo Humano en Vía Samborondón y Guayaquil. Especialistas en TDAH, Trastornos específicos del aprendizaje en lectura, escritura y aritmética, TEA y Trastornos del neurodesarrollo. Evaluaciones neuropsicológicas y psicopedagógicas, terapias y Método Tomatis®.">
+  <meta name="keywords" content="TDAH, Trastornos específicos del aprendizaje en lectura escritura y aritmetica, TEA, Trastornos del neurodesarrollo, evaluación neuropsicológica, evaluación psicopedagógica, dislexia, discalculia, autismo, terapia ocupacional, Vía Samborondón, Guayaquil, RYE Desarrollo Humano">
+  <meta property="og:title" content="RYE · Desarrollo Humano | Vía Samborondón">
+  <meta property="og:description" content="Centro especializado en TDAH, Trastornos específicos del aprendizaje (lectura, escritura y aritmética), TEA y Trastornos del neurodesarrollo en Vía Samborondón y Guayaquil.">
+  <title>RYE · Desarrollo Humano | Vía Samborondón</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "RYE · Desarrollo Humano",
+    "image": "assets/logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Vía Samborondón",
+      "addressLocality": "Vía Samborondón",
+      "addressRegion": "Guayas",
+      "addressCountry": "EC"
+    },
+    "telephone": "+593993046031",
+    "description": "Centro psicopedagógico y neuropsicológico en Vía Samborondón y Guayaquil. Especialistas en TDAH, Trastornos específicos del aprendizaje en lectura, escritura y aritmética, TEA y Trastornos del neurodesarrollo.",
+    "medicalSpecialty": [
+      "Neuropsychology",
+      "Pediatrics",
+      "OccupationalTherapy"
+    ],
+    "knowsAbout": [
+      "TDAH (Trastorno por Déficit de Atención e Hiperactividad)",
+      "Trastornos específicos del aprendizaje en lectura, escritura y aritmética",
+      "TEA (Trastorno del Espectro Autista)",
+      "Trastornos del neurodesarrollo",
+      "Método Tomatis",
+      "Terapia Ocupacional"
+    ]
+  }
+  </script>
   <link rel="icon" type="image/png" href="assets/logo.png">
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="assets/logo.png">
@@ -15,6 +46,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@1,700;1,800&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="assets/vendor/gsap.min.js" defer></script>
+  <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
   <script src="config.js" defer></script>
   <script src="app.js" defer></script>
 </head>
@@ -33,20 +66,32 @@
         <a class="brand" href="#inicio" aria-label="RYE Desarrollo Humano, inicio"><img src="assets/logo.png" alt="RYE Desarrollo Humano" width="1600" height="960" fetchpriority="high"></a>
         <button class="menu-toggle" aria-label="Abrir menú" aria-controls="main-nav" aria-expanded="false"><span></span><span></span><span></span></button>
         <nav class="navigation" id="main-nav" aria-label="Navegación principal">
-          <button data-service="Evaluaciones">Evaluaciones</button><button data-service="Terapias">Terapias</button><button data-service="Talleres">Talleres</button><button data-about>Nosotros</button>
+          <button data-service="Evaluaciones">Evaluaciones</button><button data-service="Terapias">Terapias</button><button data-service="Talleres">Talleres</button><button data-service="Servicios">Servicios</button><button data-about>Nosotros</button>
         </nav>
         <a class="whatsapp desktop-only" href="https://wa.me/593993046031" target="_blank" rel="noopener noreferrer" aria-label="Abrir chat de WhatsApp con RYE"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 20.15C10.57 20.15 9.12 19.75 7.85 19L7.55 18.82L4.43 19.64L5.26 16.6L5.06 16.29C4.24 14.98 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.05 20.15ZM16.57 14.39C16.32 14.27 15.11 13.67 14.89 13.58C14.66 13.5 14.5 13.46 14.33 13.71C14.16 13.96 13.69 14.51 13.54 14.68C13.4 14.84 13.25 14.86 13 14.74C12.75 14.61 11.96 14.35 11.02 13.52C10.29 12.87 9.8 12.07 9.66 11.82C9.51 11.58 9.64 11.44 9.77 11.31C9.88 11.2 10.02 11.02 10.15 10.87C10.27 10.72 10.31 10.62 10.39 10.45C10.48 10.29 10.43 10.14 10.37 10.02C10.31 9.9 9.82 8.69 9.61 8.2C9.41 7.71 9.21 7.78 9.06 7.77C8.92 7.76 8.75 7.76 8.59 7.76C8.42 7.76 8.16 7.82 7.93 8.07C7.71 8.32 7.07 8.91 7.07 10.13C7.07 11.35 7.96 12.52 8.08 12.69C8.21 12.85 9.82 15.34 12.3 16.4C12.89 16.65 13.35 16.81 13.71 16.92C14.3 17.11 14.84 17.08 15.27 17.02C15.74 16.95 16.73 16.42 16.94 15.84C17.15 15.25 17.15 14.75 17.08 14.64C17.02 14.53 16.82 14.51 16.57 14.39Z" fill="currentColor"/></svg><span>WhatsApp</span></a>
       </header>
-      <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Psicopedagogía y neuropsicología en Guayaquil</div>
+      <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Psicopedagogía y neuropsicología en Vía Samborondón · Guayaquil</div>
       <h1 id="hero-title"><span class="title-first">EVALUACIÓN Y <span class="blue-gradient">ORIENTACIÓN</span></span><span class="title-serif">PARA POTENCIAR</span><span class="title-last">TU DESARROLLO</span></h1>
-      <p class="description">Evaluaciones, terapias y acompañamiento<br class="desktop-break"> personalizado para cada etapa.</p>
+      <p class="description">Evaluaciones, terapias y acompañamiento personalizado para cada etapa.</p>
+      <div class="hero-disorders-tags" aria-label="Especialidades diagnósticas y terapéuticas de RYE">
+        <span class="disorder-pill">TDAH</span>
+        <span class="disorder-pill">Trastornos específicos del aprendizaje en lectura, escritura y aritmética</span>
+        <span class="disorder-pill">TEA</span>
+        <span class="disorder-pill">Trastornos del neurodesarrollo</span>
+      </div>
       <a class="whatsapp-banner mobile-only" href="https://wa.me/593993046031" target="_blank" rel="noopener noreferrer" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 20.15C10.57 20.15 9.12 19.75 7.85 19L7.55 18.82L4.43 19.64L5.26 16.6L5.06 16.29C4.24 14.98 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.05 20.15ZM16.57 14.39C16.32 14.27 15.11 13.67 14.89 13.58C14.66 13.5 14.5 13.46 14.33 13.71C14.16 13.96 13.69 14.51 13.54 14.68C13.4 14.84 13.25 14.86 13 14.74C12.75 14.61 11.96 14.35 11.02 13.52C10.29 12.87 9.8 12.07 9.66 11.82C9.51 11.58 9.64 11.44 9.77 11.31C9.88 11.2 10.02 11.02 10.15 10.87C10.27 10.72 10.31 10.62 10.39 10.45C10.48 10.29 10.43 10.14 10.37 10.02C10.31 9.9 9.82 8.69 9.61 8.2C9.41 7.71 9.21 7.78 9.06 7.77C8.92 7.76 8.75 7.76 8.59 7.76C8.42 7.76 8.16 7.82 7.93 8.07C7.71 8.32 7.07 8.91 7.07 10.13C7.07 11.35 7.96 12.52 8.08 12.69C8.21 12.85 9.82 15.34 12.3 16.4C12.89 16.65 13.35 16.81 13.71 16.92C14.3 17.11 14.84 17.08 15.27 17.02C15.74 16.95 16.73 16.42 16.94 15.84C17.15 15.25 17.15 14.75 17.08 14.64C17.02 14.53 16.82 14.51 16.57 14.39Z" fill="currentColor"/></svg><span>Escríbenos por WhatsApp</span></a>
       <div class="experience desktop-only" aria-label="Más de 20 años de experiencia"><span class="experience-intro">Más de:</span><strong>20</strong><span class="experience-caption">Años de<br>experiencia</span></div>
       <div class="carousel" role="region" aria-roledescription="carrusel" aria-label="Conoce RYE Desarrollo Humano">
         <div class="slide is-active" data-slide="0" role="group" aria-roledescription="diapositiva" aria-label="1 de 3: recepción de RYE"><img src="assets/clinic_recepcion.jpg" alt="Recepción de RYE Desarrollo Humano, con mostrador naranja y el logo de la clínica" width="720" height="1600" fetchpriority="high"></div>
         <div class="slide" data-slide="1" role="group" aria-roledescription="diapositiva" aria-label="2 de 3: espacio de actividades" aria-hidden="true"><img src="assets/clinic_tomatis.jpg" alt="Espacio de actividades de RYE con mesa, sillas y materiales didácticos" width="720" height="1600"></div>
         <div class="slide founders" data-slide="2" role="group" aria-roledescription="diapositiva" aria-label="3 de 3: Rigoberto y Erika" aria-hidden="true"><img src="assets/founders_rigoberto_erika.jpg" alt="Rigoberto y Erika, fundadores de RYE Desarrollo Humano" width="1264" height="841"></div>
-        <div class="location desktop-only" aria-label="Ubicación: Vía Samborondón - Guayaquil"><span aria-hidden="true"></span>VÍA SAMBORONDÓN - GUAYAQUIL</div>
+        <div class="carousel-white-overlay" aria-hidden="true"></div>
+        <div class="carousel-location" aria-label="Ubicación: Vía Samborondón - Guayaquil">
+          <svg class="carousel-location-pin" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+          </svg>
+          <span>Vía Samborondón - Guayaquil</span>
+        </div>
         <div class="experience-mobile mobile-only" aria-label="Más de 20 años de experiencia">
           <div class="exp-left">
             <span class="exp-intro">Más de</span>
@@ -57,21 +102,1694 @@
             <span>experiencia</span>
           </div>
         </div>
-        <div class="carousel-dots mobile-only" role="tablist" aria-label="Diapositivas">
-          <button data-go="0" class="is-active" aria-label="1 de 3"></button>
-          <button data-go="1" aria-label="2 de 3"></button>
-          <button data-go="2" aria-label="3 de 3"></button>
+      </div>
+
+      <!-- FRASE DE MARCA PROTAGONISTA (TRANSICIÓN DE SCROLL) -->
+      <div class="hero-brand-statement" id="hero-brand-statement" aria-label="Aprende, crece y SonRYE.">
+        <div class="hero-statement-container">
+          <p class="hero-statement-phrase">
+            <span class="statement-line statement-line-1">Aprende, crece</span>
+            <span class="statement-line statement-line-2">y <span class="statement-highlight">SonRYE.</span></span>
+          </p>
+          <div class="hero-statement-accent" aria-hidden="true">
+            <span class="statement-bar"></span>
+          </div>
         </div>
       </div>
-      <div class="location-mobile mobile-only" aria-label="Ubicación: Vía Samborondón, Guayaquil">
-        <svg class="location-pin" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7Z" fill="#ff5e3a"/>
-          <circle cx="12" cy="9" r="2.5" fill="white"/>
+    </section>
+
+    <!-- SECCIÓN EVALUACIONES (CARD PRINCIPAL DE ENTRADA) -->
+    <section class="evaluaciones-section" id="evaluaciones" aria-labelledby="eval-heading">
+      <div class="eval-card-container">
+        <div class="eval-hero-card" id="eval-hero-card" tabindex="0" role="region" aria-label="Evaluación neuropsicológica y psicopedagogica">
+          <div class="eval-card-shine" aria-hidden="true"></div>
+          <div class="eval-card-content">
+            <div class="eval-eyebrow">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              <span>EVALUACIONES EN VÍA SAMBORONDÓN</span>
+            </div>
+            <h2 id="eval-heading" class="eval-title">
+              <span class="eval-title-main">Evaluación</span>
+              <span class="eval-title-italic">neuropsicológica y psicopedagogica</span>
+            </h2>
+            <p class="eval-desc">
+              Identificamos fortalezas y dificultades para comprender las necesidades de cada persona y orientar el apoyo necesario. Especialistas en evaluación de TDAH, Trastornos específicos del aprendizaje en lectura, escritura y aritmética, TEA y Trastornos del neurodesarrollo.
+            </p>
+            <div class="eval-meta-bar" aria-label="Información de atención">
+              <div class="eval-meta-item">
+                <svg viewBox="0 0 24 24" class="eval-meta-icon" aria-hidden="true">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="9" cy="7" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                  <path d="m16 11 2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Atención personalizada</span>
+              </div>
+              <span class="eval-meta-divider" aria-hidden="true">|</span>
+              <div class="eval-meta-item">
+                <svg viewBox="0 0 24 24" class="eval-meta-icon" aria-hidden="true">
+                  <path d="M17 21v-2a4 4 0 0 0-3-3.87M9 21v-2a4 4 0 0 1 3-3.87" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="9" cy="7" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" fill="none" stroke="currentColor" stroke-width="2"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" fill="none" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <span>Niños, jóvenes y adultos</span>
+              </div>
+              <span class="eval-meta-divider" aria-hidden="true">|</span>
+              <div class="eval-meta-item">
+                <svg viewBox="0 0 24 24" class="eval-meta-icon eval-meta-pin" aria-hidden="true">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7Z" fill="currentColor"/>
+                  <circle cx="12" cy="9" r="2.5" fill="white"/>
+                </svg>
+                <span>Vía Samborondón, Guayaquil</span>
+              </div>
+            </div>
+          </div>
+          <div class="eval-card-media">
+            <img src="assets/evaluaciones_banner.jpg" alt="Especialista en neuropsicología trabajando con un niño con bloques didácticos" class="eval-banner-img" loading="lazy" width="1200" height="675">
+            <div class="eval-media-fade" aria-hidden="true"></div>
+            <button class="eval-more-btn" id="open-eval-subpage" aria-label="Ver todas las evaluaciones y detalles">
+              <span>Más</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="eval-more-arrow">
+                <path d="M5 12h14M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN TERAPIAS (CARD PRINCIPAL DE ENTRADA) -->
+    <section class="terapias-section" id="terapias" aria-labelledby="terapias-heading">
+      <div class="terapias-card-container">
+        <div class="terapias-hero-card" id="terapias-hero-card" tabindex="0" role="region" aria-label="Terapias personalizadas y especializadas">
+          <div class="terapias-card-shine" aria-hidden="true"></div>
+          <div class="terapias-card-content">
+            <div class="terapias-eyebrow">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              <span>TERAPIAS EN GUAYAQUIL</span>
+            </div>
+            <h2 id="terapias-heading" class="terapias-title">
+              <span class="terapias-title-main">Terapias</span>
+              <span class="terapias-title-italic">personalizadas y especializadas</span>
+            </h2>
+            <p class="terapias-desc">
+              Acompañamos el neurodesarrollo con intervenciones específicas en TDAH, Trastornos específicos del aprendizaje en lectura, escritura y aritmética, TEA y regulación emocional.
+            </p>
+            <div class="terapias-meta-bar" aria-label="Información del servicio">
+              <div class="terapias-meta-item">
+                <svg viewBox="0 0 24 24" class="terapias-meta-icon" aria-hidden="true">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="9" cy="7" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                  <path d="m16 11 2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Atención individualizada</span>
+              </div>
+              <span class="terapias-meta-divider" aria-hidden="true">|</span>
+              <div class="terapias-meta-item">
+                <svg viewBox="0 0 24 24" class="terapias-meta-icon" aria-hidden="true">
+                  <path d="M3 18v-6a9 9 0 0 1 18 0v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" fill="none" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <span>Método Tomatis® & Neurodesarrollo</span>
+              </div>
+              <span class="terapias-meta-divider" aria-hidden="true">|</span>
+              <div class="terapias-meta-item">
+                <svg viewBox="0 0 24 24" class="terapias-meta-icon terapias-meta-pin" aria-hidden="true">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7Z" fill="currentColor"/>
+                  <circle cx="12" cy="9" r="2.5" fill="white"/>
+                </svg>
+                <span>Vía Samborondón, Guayaquil</span>
+              </div>
+            </div>
+          </div>
+          <div class="terapias-card-media">
+            <img src="assets/terapias_banner.jpg" alt="Especialista brindando terapia personalizada y apoyo psicopedagógico en RYE" class="terapias-banner-img" loading="lazy" width="1200" height="675">
+            <div class="terapias-media-fade" aria-hidden="true"></div>
+            <button class="terapias-more-btn" id="open-terapias-subpage" aria-label="Ver todas las terapias y detalles">
+              <span>Más</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="terapias-more-arrow">
+                <path d="M5 12h14M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN TALLERES (HERRAMIENTAS PARA APRENDER Y CRECER) -->
+    <section class="talleres-section" id="talleres" aria-labelledby="talleres-heading">
+      <div class="talleres-card-container">
+        <div class="talleres-hero-card" id="talleres-hero-card" tabindex="0" role="region" aria-label="Talleres: Herramientas para aprender y crecer">
+          <div class="talleres-card-shine" aria-hidden="true"></div>
+          
+          <!-- Elementos decorativos estilo dibujo según diseño -->
+          <div class="talleres-doodle-rays" aria-hidden="true">
+            <span class="ray ray-1"></span>
+            <span class="ray ray-2"></span>
+          </div>
+          <div class="talleres-doodle-star" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#ea583a" stroke-width="2.2">
+              <path d="m12 2 2.6 6.8 7.4.4-5.6 4.6 1.8 7.2L12 17l-6.2 4 1.8-7.2-5.6-4.6 7.4-.4z"/>
+            </svg>
+          </div>
+          <div class="talleres-dashed-wave" aria-hidden="true"></div>
+
+          <div class="talleres-card-content">
+            <div class="talleres-eyebrow">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              <span>TALLERES</span>
+            </div>
+            <h2 id="talleres-heading" class="talleres-title">
+              <span class="talleres-title-main">Herramientas para</span>
+              <span class="talleres-title-italic">aprender y crecer</span>
+            </h2>
+            <p class="talleres-desc">
+              Talleres prácticos para estudiar con más organización y comprender mejor tus emociones.
+            </p>
+
+            <div class="talleres-feature-row" aria-label="Talleres destacados">
+              <button type="button" class="talleres-feature-box box-study" id="btn-taller-estudio" aria-label="Ver taller de Técnicas de estudio">
+                <div class="talleres-feature-icon-circle" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#002650" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/>
+                    <path d="M6 6h10M6 10h10M6 14h6"/>
+                  </svg>
+                </div>
+                <span>Técnicas de estudio</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="talleres-feature-arrow">
+                  <path d="M5 12h14M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+
+              <button type="button" class="talleres-feature-box box-emotional" id="btn-taller-emocional" aria-label="Ver taller de Inteligencia emocional">
+                <div class="talleres-feature-icon-circle" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#002650" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9.5 2a4.5 4.5 0 0 0-4.5 4.5c0 1.2.5 2.3 1.3 3.1A4.5 4.5 0 0 0 8 18h1.5"/>
+                    <path d="M14.5 2a4.5 4.5 0 0 1 4.5 4.5c0 1.2-.5 2.3-1.3 3.1A4.5 4.5 0 0 1 16 18h-1.5"/>
+                    <path d="M12 2v18"/>
+                    <path d="M12 7.5a2 2 0 0 1 2 2c0 1.5-2 3-2 3s-2-1.5-2-3a2 2 0 0 1 2-2z" fill="#ea583a" stroke="#ea583a"/>
+                  </svg>
+                </div>
+                <span>Inteligencia emocional</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="talleres-feature-arrow">
+                  <path d="M5 12h14M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+
+            <div class="talleres-meta-bar" aria-label="Información de los talleres">
+              <div class="talleres-meta-item">
+                <svg viewBox="0 0 24 24" class="talleres-meta-icon" aria-hidden="true">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="9" cy="7" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" fill="none" stroke="currentColor" stroke-width="2"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" fill="none" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <span>Grupos reducidos y dinámicos</span>
+              </div>
+              <span class="talleres-meta-divider" aria-hidden="true">|</span>
+              <div class="talleres-meta-item">
+                <svg viewBox="0 0 24 24" class="talleres-meta-icon" aria-hidden="true">
+                  <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z" fill="none" stroke="currentColor" stroke-width="2"/>
+                  <path d="M6 6h10M6 10h10" fill="none" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <span>Niños, jóvenes y familias</span>
+              </div>
+              <span class="talleres-meta-divider" aria-hidden="true">|</span>
+              <div class="talleres-meta-item">
+                <svg viewBox="0 0 24 24" class="talleres-meta-icon talleres-meta-pin" aria-hidden="true">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7Z" fill="currentColor"/>
+                  <circle cx="12" cy="9" r="2.5" fill="white"/>
+                </svg>
+                <span>Vía Samborondón, Guayaquil</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="talleres-card-media">
+            <img src="assets/talleres_banner.jpg" alt="Jóvenes participando activamente en un taller dinámico de técnicas de estudio y desarrollo personal en RYE" class="talleres-banner-img" loading="lazy" width="1200" height="675">
+            <div class="talleres-media-fade" aria-hidden="true"></div>
+            <button class="talleres-more-btn" id="open-talleres-subpage-alt" aria-label="Ver todos los talleres y detalles">
+              <span>Más</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="talleres-more-arrow">
+                <path d="M5 12h14M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE SERVICIOS (CARRUSEL LATERAL CON SCROLL HORIZONTAL) -->
+    <section class="servicios-section" id="servicios" aria-label="Servicios especializados de RYE">
+      <div class="servicios-sticky-wrap">
+        <div class="servicios-container">
+          
+          <!-- Carrusel lateral con scroll horizontal fluido -->
+          <div class="servicios-carousel-block">
+            <div class="servicios-carousel-header">
+              <div class="servicios-carousel-heading-wrap">
+                <h2 class="servicios-title-clean">Servicios</h2>
+                <span class="servicios-carousel-hint">Desliza para explorar</span>
+              </div>
+            </div>
+
+            <div class="servicios-carousel-viewport" id="servicios-carousel-viewport" tabindex="0" role="region" aria-label="Carrusel lateral con scroll horizontal de servicios">
+              <div class="servicios-carousel-track" id="servicios-carousel-track">
+            
+            <!-- TARJETA 01: MÉTODO TOMATIS® -->
+            <article class="servicios-card" data-service-key="tomatis" tabindex="0" role="button" aria-label="Conocer más sobre Método Tomatis®">
+              <div class="servicios-card-media">
+                <img src="assets/clinic_tomatis.jpg" alt="Sala de estimulación neurosensorial y equipos del Método Tomatis® en RYE" class="servicios-card-img" loading="lazy" width="600" height="380">
+                <span class="servicios-card-tag tag-tomatis">DE 3 A 99 AÑOS</span>
+              </div>
+              <div class="servicios-card-body">
+                <span class="servicios-card-num">01</span>
+                <h3 class="servicios-card-title">Método Tomatis®</h3>
+                <p class="servicios-card-desc">
+                  Programa de estimulación neurosensorial basado en la escucha y adaptado a distintas necesidades de aprendizaje y desarrollo.
+                </p>
+                <div class="servicios-card-action">
+                  <span class="servicios-card-link">Conocer más</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- TARJETA 02: ORIENTACIÓN VOCACIONAL Y PROFESIONAL -->
+            <article class="servicios-card" data-service-key="vocacional" tabindex="0" role="button" aria-label="Conocer más sobre Orientación Vocacional y Profesional">
+              <div class="servicios-card-media">
+                <img src="assets/vocacional_banner.jpg" alt="Joven en sesión de orientación vocacional y elección de carrera profesional" class="servicios-card-img" loading="lazy" width="600" height="380">
+                <span class="servicios-card-tag tag-vocacional">ADOLESCENTES Y JÓVENES</span>
+              </div>
+              <div class="servicios-card-body">
+                <span class="servicios-card-num">02</span>
+                <h3 class="servicios-card-title">Orientación Vocacional y Profesional</h3>
+                <p class="servicios-card-desc">
+                  Acompañamos a adolescentes y jóvenes a conocerse mejor y tomar decisiones seguras sobre su futuro académico y laboral.
+                </p>
+                <div class="servicios-card-action">
+                  <span class="servicios-card-link">Conocer más</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- TARJETA 03: ASESORAMIENTO FAMILIAR Y DE PAREJA -->
+            <article class="servicios-card" data-service-key="familiar" tabindex="0" role="button" aria-label="Conocer más sobre Asesoramiento Educativo Familiar y de Pareja">
+              <div class="servicios-card-media">
+                <img src="assets/familiar_banner.jpg" alt="Familia en sesión de orientación y asesoramiento educativo con especialista" class="servicios-card-img" loading="lazy" width="600" height="380">
+                <span class="servicios-card-tag tag-familiar">FAMILIAS Y PAREJAS</span>
+              </div>
+              <div class="servicios-card-body">
+                <span class="servicios-card-num">03</span>
+                <h3 class="servicios-card-title">Asesoramiento Familiar y de Pareja</h3>
+                <p class="servicios-card-desc">
+                  Acompañamiento cercano para familias que buscan herramientas educativas y apoyo para afrontar situaciones familiares.
+                </p>
+                <div class="servicios-card-action">
+                  <span class="servicios-card-link">Conocer más</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- TARJETA 04: CAPACITACIONES INSTITUCIONALES -->
+            <article class="servicios-card" data-service-key="capacitaciones" tabindex="0" role="button" aria-label="Conocer más sobre Asesoramiento y Capacitaciones Institucionales">
+              <div class="servicios-card-media">
+                <img src="assets/capacitaciones_banner.jpg" alt="Capacitación y taller interactivo para docentes e instituciones educativas en sala de formación" class="servicios-card-img" loading="lazy" width="600" height="380">
+                <span class="servicios-card-tag tag-institucional">INSTITUCIONES EDUCATIVAS Y EMPRESAS</span>
+              </div>
+              <div class="servicios-card-body">
+                <span class="servicios-card-num">04</span>
+                <h3 class="servicios-card-title">Capacitaciones Institucionales</h3>
+                <p class="servicios-card-desc">
+                  Charlas, talleres y seminarios formativos para Instituciones educativas, docentes y organizaciones.
+                </p>
+                <div class="servicios-card-action">
+                  <span class="servicios-card-link">Conocer más</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- TARJETA 05: TERAPIA OCUPACIONAL -->
+            <article class="servicios-card" data-service-key="ocupacional" tabindex="0" role="button" aria-label="Conocer más sobre Terapia Ocupacional">
+              <div class="servicios-card-media">
+                <img src="assets/clinic_recepcion.jpg" alt="Sesión de integración sensorial y estimulación psicomotriz en RYE" class="servicios-card-img" loading="lazy" width="600" height="380">
+                <span class="servicios-card-tag tag-ocupacional">INTEGRACIÓN SENSORIAL Y AUTONOMÍA</span>
+              </div>
+              <div class="servicios-card-body">
+                <span class="servicios-card-num">05</span>
+                <h3 class="servicios-card-title">Terapia Ocupacional</h3>
+                <p class="servicios-card-desc">
+                  Desarrollo de habilidades psicomotrices, integración sensorial, coordinación motora y autonomía funcional en las actividades escolares y cotidianas.
+                </p>
+                <div class="servicios-card-action">
+                  <span class="servicios-card-link">Conocer más</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Indicadores de paginación del carrusel -->
+        <div class="servicios-carousel-dots" id="servicios-carousel-dots" role="tablist" aria-label="Seleccionar servicio">
+          <button class="carousel-dot is-active" data-dot="0" aria-label="Servicio 1 de 5"></button>
+          <button class="carousel-dot" data-dot="1" aria-label="Servicio 2 de 5"></button>
+          <button class="carousel-dot" data-dot="2" aria-label="Servicio 3 de 5"></button>
+          <button class="carousel-dot" data-dot="3" aria-label="Servicio 4 de 5"></button>
+          <button class="carousel-dot" data-dot="4" aria-label="Servicio 5 de 5"></button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- =========================================================================
+         SECCIÓN ANIMADA: «A tu ritmo, a tu manera, SonRYE.» (GSAP + SCROLLTRIGGER)
+         ========================================================================= -->
+    <section class="cradle-section" id="filosofia" aria-label="A tu ritmo, a tu manera, SonRYE">
+      <div class="cradle-bg-atmosphere" aria-hidden="true">
+        <div class="cradle-ambient-glow glow-1"></div>
+        <div class="cradle-ambient-glow glow-2"></div>
+      </div>
+
+      <div class="cradle-viewport">
+        <!-- 1. ENCABEZADO Y FRASE PRINCIPAL -->
+        <div class="cradle-header" id="cradle-header">
+          <div class="cradle-eyebrow">
+            <span class="cradle-eyebrow-dot" aria-hidden="true"></span>
+            <span>NUESTRO ENFOQUE</span>
+          </div>
+          <h2 class="cradle-phrase" id="cradle-phrase" aria-label="A tu ritmo, a tu manera, SonRYE.">
+            <span class="cradle-phrase-part part-1">A tu ritmo,</span>
+            <span class="cradle-phrase-part part-2">a tu manera,</span>
+            <span class="cradle-phrase-part part-3"><span class="cradle-highlight">SonRYE.</span></span>
+          </h2>
+        </div>
+
+        <!-- 2 & 3. SVG CON LÍNEAS PUNTEADAS ENTRELAZADAS QUE CONVERGEN EN UNA LÍNEA HACIA ABAJO -->
+        <div class="cradle-svg-stage" aria-hidden="true">
+          <!-- SVG para COMPUTADORA / TABLET HORIZONTAL (viewBox="0 0 1000 650") -->
+          <svg class="cradle-svg cradle-svg-desktop" viewBox="0 0 1000 650" fill="none">
+            <defs>
+              <mask id="cradle-mask-left">
+                <path id="mask-path-left" d="M 90,130 C 270,195 380,125 500,205" stroke="#ffffff" stroke-width="14" stroke-linecap="round" fill="none" />
+              </mask>
+              <mask id="cradle-mask-right">
+                <path id="mask-path-right" d="M 910,130 C 730,195 620,125 500,205" stroke="#ffffff" stroke-width="14" stroke-linecap="round" fill="none" />
+              </mask>
+              <mask id="cradle-mask-stem">
+                <path id="mask-path-stem" d="M 500,205 L 500,270" stroke="#ffffff" stroke-width="14" stroke-linecap="round" fill="none" />
+              </mask>
+              <mask id="cradle-mask-bowl">
+                <path id="mask-path-bowl" d="M 500,270 C 470,335 180,395 135,490 C 95,575 220,635 480,635 C 735,635 885,585 925,465" stroke="#ffffff" stroke-width="16" stroke-linecap="round" fill="none" />
+              </mask>
+            </defs>
+
+            <!-- Curvas punteadas de RYE entrelazadas -->
+            <path id="cradle-line-left" d="M 90,130 C 270,195 380,125 500,205" stroke="rgba(255, 170, 130, 0.7)" stroke-width="2.6" stroke-dasharray="8 8" fill="none" mask="url(#cradle-mask-left)" />
+            <path id="cradle-line-right" d="M 910,130 C 730,195 620,125 500,205" stroke="rgba(255, 170, 130, 0.7)" stroke-width="2.6" stroke-dasharray="8 8" fill="none" mask="url(#cradle-mask-right)" />
+            
+            <!-- Punto de unión luminosa -->
+            <circle id="cradle-junction" cx="500" cy="205" r="5" fill="#ff7845" opacity="0" />
+
+            <!-- Línea única que continúa hacia abajo -->
+            <path id="cradle-line-stem" d="M 500,205 L 500,270" stroke="#ff7845" stroke-width="3" stroke-dasharray="8 8" fill="none" mask="url(#cradle-mask-stem)" />
+            
+            <!-- Curva cuna / bowl inferior de soporte -->
+            <path id="cradle-line-bowl" d="M 500,270 C 470,335 180,395 135,490 C 95,575 220,635 480,635 C 735,635 885,585 925,465" stroke="rgba(255, 255, 255, 0.5)" stroke-width="2.4" stroke-dasharray="8 8" fill="none" mask="url(#cradle-mask-bowl)" />
+          </svg>
+
+          <!-- SVG para TELÉFONO / MOBILE (viewBox="0 0 390 650") -->
+          <svg class="cradle-svg cradle-svg-mobile" viewBox="0 0 390 650" fill="none">
+            <defs>
+              <mask id="cradle-mask-left-m">
+                <path id="mask-path-left-m" d="M 25,115 C 95,155 145,130 195,180" stroke="#ffffff" stroke-width="14" stroke-linecap="round" fill="none" />
+              </mask>
+              <mask id="cradle-mask-right-m">
+                <path id="mask-path-right-m" d="M 365,115 C 295,155 245,130 195,180" stroke="#ffffff" stroke-width="14" stroke-linecap="round" fill="none" />
+              </mask>
+              <mask id="cradle-mask-stem-m">
+                <path id="mask-path-stem-m" d="M 195,180 L 195,230" stroke="#ffffff" stroke-width="14" stroke-linecap="round" fill="none" />
+              </mask>
+              <mask id="cradle-mask-bowl-m">
+                <path id="mask-path-bowl-m" d="M 195,230 C 175,275 40,330 25,430 C 10,535 85,630 195,630 C 305,630 380,535 365,430" stroke="#ffffff" stroke-width="16" stroke-linecap="round" fill="none" />
+              </mask>
+            </defs>
+
+            <path id="cradle-line-left-m" d="M 25,115 C 95,155 145,130 195,180" stroke="rgba(255, 170, 130, 0.7)" stroke-width="2.4" stroke-dasharray="7 7" fill="none" mask="url(#cradle-mask-left-m)" />
+            <path id="cradle-line-right-m" d="M 365,115 C 295,155 245,130 195,180" stroke="rgba(255, 170, 130, 0.7)" stroke-width="2.4" stroke-dasharray="7 7" fill="none" mask="url(#cradle-mask-right-m)" />
+            <circle id="cradle-junction-m" cx="195" cy="180" r="4.5" fill="#ff7845" opacity="0" />
+            <path id="cradle-line-stem-m" d="M 195,180 L 195,230" stroke="#ff7845" stroke-width="2.8" stroke-dasharray="7 7" fill="none" mask="url(#cradle-mask-stem-m)" />
+            <path id="cradle-line-bowl-m" d="M 195,230 C 175,275 40,330 25,430 C 10,535 85,630 195,630 C 305,630 380,535 365,430" stroke="rgba(255, 255, 255, 0.5)" stroke-width="2.2" stroke-dasharray="7 7" fill="none" mask="url(#cradle-mask-bowl-m)" />
+          </svg>
+        </div>
+
+        <!-- 4. CONTENEDOR DE LAS CINCO PELOTAS -->
+        <div class="cradle-balls-stage" id="cradle-balls-stage" role="region" aria-label="Pilares y experiencia de RYE">
+          <!-- PELOTA 1: +20 años · de experiencia. -->
+          <div class="cradle-ball ball-1" id="cradle-ball-1" aria-label="+20 años de experiencia">
+            <div class="ball-inner">
+              <strong class="ball-title">+20 años</strong>
+              <span class="ball-subtitle">de experiencia.</span>
+            </div>
+          </div>
+
+          <!-- PELOTA 2: +800 pacientes · satisfechos. -->
+          <div class="cradle-ball ball-2" id="cradle-ball-2" aria-label="+800 pacientes satisfechos">
+            <div class="ball-inner">
+              <strong class="ball-title">+800 pacientes</strong>
+              <span class="ball-subtitle">satisfechos.</span>
+            </div>
+          </div>
+
+          <!-- PELOTA 3: Personas y familias · Niños, jóvenes y adultos. -->
+          <div class="cradle-ball ball-3" id="cradle-ball-3" aria-label="Personas y familias: Niños, jóvenes y adultos">
+            <div class="ball-inner">
+              <strong class="ball-title">Personas y familias</strong>
+              <span class="ball-subtitle">Niños, jóvenes y adultos.</span>
+            </div>
+          </div>
+
+          <!-- PELOTA 4: Talleres · Técnicas de estudio e inteligencia emocional. -->
+          <div class="cradle-ball ball-4" id="cradle-ball-4" aria-label="Talleres: Técnicas de estudio e inteligencia emocional">
+            <div class="ball-inner">
+              <strong class="ball-title">Talleres</strong>
+              <span class="ball-subtitle">Técnicas de estudio e inteligencia emocional.</span>
+            </div>
+          </div>
+
+          <!-- PELOTA 5: En un mismo centro · Evaluación, orientación e intervención. -->
+          <div class="cradle-ball ball-5" id="cradle-ball-5" aria-label="En un mismo centro: Evaluación, orientación e intervención">
+            <div class="ball-inner">
+              <strong class="ball-title">En un mismo centro</strong>
+              <span class="ball-subtitle">Evaluación, orientación e intervención.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECCIÓN «NOSOTROS» (ESTILO EDITORIAL CINEMÁTICO - SIN RECUADROS)
+         ========================================================================= -->
+    <section class="nosotros-section" id="nosotros" aria-labelledby="nosotros-hero-title">
+      <!-- ATMÓSFERA SUTIL CON GLOW ORGÁNICO -->
+      <div class="nosotros-atmosphere" aria-hidden="true">
+        <div class="nosotros-ambient-glow"></div>
+        <div class="nosotros-ambient-glow glow-coral"></div>
+        <svg class="nosotros-dashed-deco" viewBox="0 0 1000 280" fill="none" preserveAspectRatio="none">
+          <path d="M 80,140 C 320,30 680,240 920,110" stroke="rgba(255, 120, 69, 0.35)" stroke-width="2" stroke-dasharray="8 8" />
         </svg>
-        <span>Vía Samborondón · Guayaquil</span>
+      </div>
+
+      <div class="nosotros-stage-wrapper">
+        <!-- 1. TÍTULO GIGANTE DE FONDO (COMO EN LA REFERENCIA) -->
+        <div class="nosotros-backdrop-heading">
+          <div class="nosotros-eyebrow">
+            <span class="nosotros-eyebrow-dot" aria-hidden="true"></span>
+            <span>NOSOTROS · EQUIPO RYE</span>
+          </div>
+          <h2 class="nosotros-hero-title" id="nosotros-hero-title">
+            <span class="title-word serif">Personas que</span>
+            <span class="title-word script">acompañan personas.</span>
+          </h2>
+        </div>
+
+        <!-- 2. COMPOSICIÓN EDITORIAL: FOTO RECORTADA SIN FONDO + LETRAS PEQUEÑAS FLOTANTES SIN RECUADROS -->
+        <div class="nosotros-showcase">
+          <!-- TEXTO FLOTANTE IZQUIERDA (MSR. RIGOBERTO BERMEO) -->
+          <div class="nosotros-floating-bio bio-left">
+            <h3 class="floating-name">Msr. Rigoberto Bermeo</h3>
+            <span class="floating-role">Director de bienestar familiar</span>
+            <p class="floating-desc">
+              Director de bienestar familiar, máster en neuropsicología y educación, máster en Orientación Educativa y familiar, Psicologo Educativo y Orientador vocacional, Práctico tomatis.
+            </p>
+          </div>
+
+          <!-- IMAGEN CENTRAL RECORTADA SIN FONDO (TRANSPARENTE) -->
+          <div class="nosotros-cutout-container">
+            <img src="assets/founders_cutout.png" alt="Msr. Rigoberto Bermeo y Psicóloga Erika Alvarado de Bermeo, fundadores de RYE Desarrollo Humano" class="nosotros-cutout-img" width="780" height="820" loading="lazy">
+          </div>
+
+          <!-- TEXTO FLOTANTE DERECHA (PSICÓLOGA ERIKA ALVARADO DE BERMEO) -->
+          <div class="nosotros-floating-bio bio-right">
+            <h3 class="floating-name">Psicóloga Erika Alvarado de Bermeo</h3>
+            <span class="floating-role">Directora psicopedagógica</span>
+            <p class="floating-desc">
+              Directora psicopedagogica, Psicologa educativa y orientadora vocacional, especialista en evaluación integral, práctico tomatis, Intervención psicologica en el desarrollo y la educación, rehabilitación neuropsicologica.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3. CIERRE CON FRASE FLOTANTE Y BOTÓN "CONVERSEMOS ↗" -->
+        <div class="nosotros-footer-block">
+          <p class="nosotros-closing-quote">
+            Somos Rigoberto y Erika Alvarado de Bermeo. <em>A tu ritmo, a tu manera, SonRYE.</em>
+          </p>
+          <a href="https://wa.me/593993046031?text=Hola%2C%20quisiera%20conversar%20con%20el%20equipo%20de%20RYE" class="nosotros-pill-btn" target="_blank" rel="noopener noreferrer" aria-label="Conversemos con el equipo de RYE por WhatsApp">
+            <span>Conversemos</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="btn-arrow" aria-hidden="true">
+              <path d="M7 17L17 7M7 7h10v10"/>
+            </svg>
+          </a>
+        </div>
       </div>
     </section>
   </main>
+
+  <!-- =========================================================================
+       PIE DE PÁGINA (FOOTER CON COLORES CLAROS, DATOS COMPLETOS Y WHATSAPP)
+       ========================================================================= -->
+  <footer class="site-footer" id="contacto" role="contentinfo" aria-label="Pie de página de RYE Desarrollo Humano">
+    <div class="footer-top-accent" aria-hidden="true"></div>
+
+    <div class="footer-container">
+      <div class="footer-grid">
+        <!-- COLUMNA 1: MARCA Y PROPÓSITO -->
+        <div class="footer-col footer-col-brand">
+          <a href="#inicio" class="footer-brand" aria-label="Volver al inicio de RYE Desarrollo Humano">
+            <img src="assets/logo.png" alt="RYE Desarrollo Humano" class="footer-logo" width="160" height="96" loading="lazy">
+          </a>
+          <p class="footer-tagline">
+            Personas que acompañan personas. Evaluación, orientación e intervención psicopedagógica personalizada para niños, jóvenes, adultos y familias.
+          </p>
+          <div class="footer-motto">
+            <span class="footer-motto-dot" aria-hidden="true"></span>
+            <span>A tu ritmo, a tu manera, <strong>SonRYE.</strong></span>
+          </div>
+        </div>
+
+        <!-- COLUMNA 2: ÁREAS DE ACOMPAÑAMIENTO -->
+        <div class="footer-col footer-col-nav">
+          <h3 class="footer-col-title">Servicios</h3>
+          <ul class="footer-links-list">
+            <li><button class="footer-link" data-service="Evaluaciones">Evaluaciones psicopedagógicas</button></li>
+            <li><button class="footer-link" data-service="Terapias">Terapias & estimulación cognitiva</button></li>
+            <li><button class="footer-link" data-service="Talleres">Talleres & inteligencia emocional</button></li>
+            <li><button class="footer-link" data-service="Servicios">Neuroeducación & orientación</button></li>
+            <li><a href="#nosotros" class="footer-link">Conoce a los especialistas</a></li>
+          </ul>
+        </div>
+
+        <!-- COLUMNA 3: UBICACIÓN Y MODALIDAD -->
+        <div class="footer-col footer-col-location">
+          <h3 class="footer-col-title">Ubicación & Citas</h3>
+          
+          <div class="footer-info-item">
+            <div class="footer-info-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div class="footer-info-text">
+              <strong class="footer-info-strong">Vía Samborondón – Guayaquil</strong>
+              <span class="footer-info-sub">Guayas, Ecuador</span>
+            </div>
+          </div>
+
+          <div class="footer-info-item">
+            <div class="footer-info-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+                <line x1="16" x2="16" y1="2" y2="6"/>
+                <line x1="8" x2="8" y1="2" y2="6"/>
+                <line x1="3" x2="21" y1="10" y2="10"/>
+              </svg>
+            </div>
+            <div class="footer-info-text">
+              <strong class="footer-info-strong">Atención previa cita</strong>
+              <span class="footer-info-sub">Lunes a Viernes: 08:30 – 18:30</span>
+              <span class="footer-info-sub">Sábados: Talleres y citas especiales</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMNA 4: CONTACTO DIRECTO & BOTÓN DE WHATSAPP -->
+        <div class="footer-col footer-col-contact">
+          <h3 class="footer-col-title">Conversemos</h3>
+          <p class="footer-contact-intro">
+            Cuéntanos qué necesitas y te orientaremos sobre el proceso adecuado para ti o tu familia.
+          </p>
+
+          <a href="https://wa.me/593993046031?text=Hola%2C%20quisiera%20informaci%C3%B3n%20y%20orientaci%C3%B3n%20sobre%20los%20servicios%20de%20RYE" class="footer-wa-card" target="_blank" rel="noopener noreferrer" aria-label="Abrir conversación de WhatsApp con RYE al 099 304 6031">
+            <div class="footer-wa-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" class="footer-wa-svg">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 20.15C10.57 20.15 9.12 19.75 7.85 19L7.55 18.82L4.43 19.64L5.26 16.6L5.06 16.29C4.24 14.98 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.05 20.15ZM16.57 14.39C16.32 14.27 15.11 13.67 14.89 13.58C14.66 13.5 14.5 13.46 14.33 13.71C14.16 13.96 13.69 14.51 13.54 14.68C13.4 14.84 13.25 14.86 13 14.74C12.75 14.61 11.96 14.35 11.02 13.52C10.29 12.87 9.8 12.07 9.66 11.82C9.51 11.58 9.64 11.44 9.77 11.31C9.88 11.2 10.02 11.02 10.15 10.87C10.27 10.72 10.31 10.62 10.39 10.45C10.48 10.29 10.43 10.14 10.37 10.02C10.31 9.9 9.82 8.69 9.61 8.2C9.41 7.71 9.21 7.78 9.06 7.77C8.92 7.76 8.75 7.76 8.59 7.76C8.42 7.76 8.16 7.82 7.93 8.07C7.71 8.32 7.07 8.91 7.07 10.13C7.07 11.35 7.96 12.52 8.08 12.69C8.21 12.85 9.82 15.34 12.3 16.4C12.89 16.65 13.35 16.81 13.71 16.92C14.3 17.11 14.84 17.08 15.27 17.02C15.74 16.95 16.73 16.42 16.94 15.84C17.15 15.25 17.15 14.75 17.08 14.64C17.02 14.53 16.82 14.51 16.57 14.39Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="footer-wa-content">
+              <span class="footer-wa-badge">Canal Oficial</span>
+              <strong class="footer-wa-num">099 304 6031</strong>
+            </div>
+            <span class="footer-wa-callout" aria-hidden="true">↗</span>
+          </a>
+
+          <button class="footer-contact-dialog-btn" data-contact>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+            <span>Preparar consulta web</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- LÍNEA INFERIOR DE CIERRE Y COPYRIGHT -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-copy">
+          <p>© 2026 RYE Desarrollo Humano. Todos los derechos reservados.</p>
+        </div>
+        <div class="footer-bottom-signature">
+          <span>A tu ritmo, a tu manera, <strong class="footer-signature-brand">SonRYE.</strong></span>
+        </div>
+        <div class="footer-bottom-back">
+          <a href="#inicio" class="footer-back-to-top" aria-label="Volver arriba al inicio de la página">
+            <span>Volver arriba</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 15l-6-6-6 6"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SUBPÁGINA MODAL / VISTA DETALLE DE EVALUACIONES -->
+  <div class="eval-subpage-backdrop" id="eval-subpage-modal" role="dialog" aria-modal="true" aria-labelledby="subpage-modal-title" hidden>
+    <div class="eval-subpage-overlay-bg" data-close-eval aria-hidden="true"></div>
+    <div class="eval-subpage-sheet" role="document">
+      <header class="eval-subpage-header">
+        <button class="eval-back-btn" id="close-eval-subpage" data-close-eval aria-label="Volver al inicio">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="eval-back-arrow">
+            <path d="M19 12H5M12 19l-7-7 7-7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Volver al inicio</span>
+        </button>
+        <div class="eval-subpage-badge">
+          <span class="eyebrow-dot" aria-hidden="true"></span>
+          <span>EVALUACIONES · RYE</span>
+        </div>
+        <button class="eval-close-x" data-close-eval aria-label="Cerrar vista de evaluaciones">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18 6 6 18M6 6l12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </header>
+
+      <div class="eval-subpage-content">
+        <!-- SECCIÓN 1: DOS TARJETAS (PSICOPEDAGÓGICA Y NEUROPSICOLÓGICA) -->
+        <section class="eval-subpage-cards-grid" aria-label="Tipos de evaluación">
+          <!-- TARJETA 1: EVALUACIÓN PSICOPEDAGÓGICA -->
+          <article class="eval-service-card eval-card-peach">
+            <div class="eval-service-card-top">
+              <div class="eval-icon-circle eval-icon-peach" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                </svg>
+              </div>
+              <div class="eval-service-header-text">
+                <span class="eval-age-kicker eval-kicker-peach">DE 3 A 18 AÑOS</span>
+                <h3 class="eval-service-title">Evaluación psicopedagógica</h3>
+              </div>
+            </div>
+            <p class="eval-service-desc">
+              Comprendemos cómo aprende tu hijo y qué puede estar afectando su desempeño escolar.
+            </p>
+            <div class="eval-tags-row" aria-label="Áreas evaluadas">
+              <span class="eval-tag eval-tag-peach">Lectura</span>
+              <span class="eval-tag eval-tag-peach">Escritura</span>
+              <span class="eval-tag eval-tag-peach">Matemáticas</span>
+            </div>
+          </article>
+
+          <!-- TARJETA 2: EVALUACIÓN NEUROPSICOLÓGICA -->
+          <article class="eval-service-card eval-card-blue">
+            <div class="eval-service-card-top">
+              <div class="eval-icon-circle eval-icon-blue" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 4.5a2.5 2.5 0 0 0-4.96-.46 2.5 2.5 0 0 0-1.98 3 2.5 2.5 0 0 0-1.32 4.24 3 3 0 0 0 .34 5.58 2.5 2.5 0 0 0 2.96 3.08A2.5 2.5 0 0 0 12 19.5"/>
+                  <path d="M12 4.5a2.5 2.5 0 0 1 4.96-.46 2.5 2.5 0 0 1 1.98 3 2.5 2.5 0 0 1 1.32 4.24 3 3 0 0 1-.34 5.58 2.5 2.5 0 0 1-2.96 3.08A2.5 2.5 0 0 1 12 19.5"/>
+                  <path d="M12 4.5v15"/>
+                  <path d="M9 10a2 2 0 0 0-2 2"/>
+                  <path d="M15 10a2 2 0 0 1 2 2"/>
+                  <path d="M9 15a2 2 0 0 0 2 1.5"/>
+                  <path d="M15 15a2 2 0 0 1-2 1.5"/>
+                </svg>
+              </div>
+              <div class="eval-service-header-text">
+                <span class="eval-age-kicker eval-kicker-blue">DE 3 A 99 AÑOS</span>
+                <h3 class="eval-service-title">Evaluación neuropsicológica</h3>
+              </div>
+            </div>
+            <p class="eval-service-desc">
+              Exploramos la atención, la memoria y otras funciones cognitivas según cada caso.
+            </p>
+            <div class="eval-tags-row" aria-label="Áreas evaluadas">
+              <span class="eval-tag eval-tag-blue">Atención</span>
+              <span class="eval-tag eval-tag-blue">Memoria</span>
+              <span class="eval-tag eval-tag-blue">Funciones cognitivas</span>
+            </div>
+          </article>
+        </section>
+
+        <!-- SECCIÓN 2: ¿CUÁNDO CONSIDERAR UNA EVALUACIÓN? -->
+        <section class="eval-when-section" aria-labelledby="eval-when-title">
+          <h3 id="eval-when-title" class="eval-section-heading">¿Cuándo considerar una evaluación?</h3>
+          <div class="eval-when-grid">
+            <div class="eval-when-item">
+              <div class="eval-check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="#f25345" stroke-width="2.2"/>
+                  <path d="m8 12 2.8 2.8L16 9.5" stroke="#f25345" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <p>Hay dificultades persistentes para leer, escribir o aprender matemáticas.</p>
+            </div>
+            <div class="eval-when-item">
+              <div class="eval-check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="#f25345" stroke-width="2.2"/>
+                  <path d="m8 12 2.8 2.8L16 9.5" stroke="#f25345" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <p>La familia o el colegio necesitan comprender mejor lo que está ocurriendo.</p>
+            </div>
+            <div class="eval-when-item">
+              <div class="eval-check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="#f25345" stroke-width="2.2"/>
+                  <path d="m8 12 2.8 2.8L16 9.5" stroke="#f25345" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <p>Existen dudas sobre la atención, la concentración o el aprendizaje.</p>
+            </div>
+            <div class="eval-when-item">
+              <div class="eval-check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="#f25345" stroke-width="2.2"/>
+                  <path d="m8 12 2.8 2.8L16 9.5" stroke="#f25345" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <p>Buscas orientación sobre qué apoyo podría necesitar.</p>
+            </div>
+          </div>
+          <p class="eval-reassurance-note">
+            No necesitas saber qué evaluación pedir. Podemos orientarte según tu caso.
+          </p>
+        </section>
+
+        <!-- SECCIÓN 3: ASÍ TE ACOMPAÑAMOS EN EL PROCESO -->
+        <section class="eval-process-section" aria-labelledby="eval-process-title">
+          <h3 id="eval-process-title" class="eval-section-heading">Así te acompañamos en el proceso</h3>
+          <div class="eval-process-steps">
+            <div class="eval-step-item">
+              <div class="eval-step-number" aria-hidden="true">01</div>
+              <div class="eval-step-body">
+                <h4 class="eval-step-title">Entrevista inicial</h4>
+                <p class="eval-step-desc">Recogemos información sobre el caso y las principales inquietudes.</p>
+              </div>
+            </div>
+            <div class="eval-step-divider" aria-hidden="true"></div>
+            <div class="eval-step-item">
+              <div class="eval-step-number" aria-hidden="true">02</div>
+              <div class="eval-step-body">
+                <h4 class="eval-step-title">Sesiones de evaluación</h4>
+                <p class="eval-step-desc">Evaluamos las áreas correspondientes según la edad y las necesidades.</p>
+              </div>
+            </div>
+            <div class="eval-step-divider" aria-hidden="true"></div>
+            <div class="eval-step-item">
+              <div class="eval-step-number" aria-hidden="true">03</div>
+              <div class="eval-step-body">
+                <h4 class="eval-step-title">Análisis y orientación</h4>
+                <p class="eval-step-desc">Explicamos los resultados y orientamos los siguientes pasos.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ENFOQUES Y TRASTORNOS DIAGNÓSTICOS FRECUENTES (SEO GOOGLE) -->
+        <section class="subpage-disorders-section" aria-label="Condiciones y trastornos evaluados">
+          <div class="subpage-disorders-box">
+            <h4 class="subpage-disorders-heading">Diagnóstico y evaluación psicopedagógica especializada en:</h4>
+            <div class="subpage-disorders-grid">
+              <div class="disorder-card">
+                <strong>TDAH</strong>
+                <p>Trastorno por Déficit de Atención con o sin Hiperactividad en niños, jóvenes y adultos.</p>
+              </div>
+              <div class="disorder-card">
+                <strong>Trastornos específicos del aprendizaje</strong>
+                <p>Dificultades específicas en lectura (dislexia), escritura (disgrafía) y aritmética (discalculia).</p>
+              </div>
+              <div class="disorder-card">
+                <strong>TEA</strong>
+                <p>Condición del Espectro Autista, comunicación social y neurodesarrollo integral.</p>
+              </div>
+              <div class="disorder-card">
+                <strong>Trastornos del neurodesarrollo</strong>
+                <p>Funciones ejecutivas, memoria de trabajo, atención sostenida y motricidad cognitiva.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECCIÓN 4: BANNER FINAL ¿NO SABES CUÁL NECESITAS? -->
+        <section class="eval-cta-card" aria-label="Orientación personalizada">
+          <div class="eval-cta-decor-circle eval-cta-circle-1" aria-hidden="true"></div>
+          <div class="eval-cta-decor-circle eval-cta-circle-2" aria-hidden="true"></div>
+          <div class="eval-cta-left">
+            <h3 class="eval-cta-title">¿No sabes cuál necesitas?</h3>
+            <p class="eval-cta-subtitle">Cuéntanos tu caso y te orientamos.</p>
+            <a class="eval-cta-whatsapp-btn" href="https://wa.me/593993046031?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20orientaci%C3%B3n%20sobre%20qu%C3%A9%20evaluaci%C3%B3n%20es%20adecuada%20para%20mi%20caso" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" class="eval-cta-wa-icon" aria-hidden="true">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 20.15C10.57 20.15 9.12 19.75 7.85 19L7.55 18.82L4.43 19.64L5.26 16.6L5.06 16.29C4.24 14.98 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.05 20.15ZM16.57 14.39C16.32 14.27 15.11 13.67 14.89 13.58C14.66 13.5 14.5 13.46 14.33 13.71C14.16 13.96 13.69 14.51 13.54 14.68C13.4 14.84 13.25 14.86 13 14.74C12.75 14.61 11.96 14.35 11.02 13.52C10.29 12.87 9.8 12.07 9.66 11.82C9.51 11.58 9.64 11.44 9.77 11.31C9.88 11.2 10.02 11.02 10.15 10.87C10.27 10.72 10.31 10.62 10.39 10.45C10.48 10.29 10.43 10.14 10.37 10.02C10.31 9.9 9.82 8.69 9.61 8.2C9.41 7.71 9.21 7.78 9.06 7.77C8.92 7.76 8.75 7.76 8.59 7.76C8.42 7.76 8.16 7.82 7.93 8.07C7.71 8.32 7.07 8.91 7.07 10.13C7.07 11.35 7.96 12.52 8.08 12.69C8.21 12.85 9.82 15.34 12.3 16.4C12.89 16.65 13.35 16.81 13.71 16.92C14.3 17.11 14.84 17.08 15.27 17.02C15.74 16.95 16.73 16.42 16.94 15.84C17.15 15.25 17.15 14.75 17.08 14.64C17.02 14.53 16.82 14.51 16.57 14.39Z" fill="currentColor"/>
+              </svg>
+              <span>Consultar una evaluación por WhatsApp</span>
+              <span class="eval-cta-chevron" aria-hidden="true">›</span>
+            </a>
+          </div>
+          <div class="eval-cta-divider" aria-hidden="true"></div>
+          <div class="eval-cta-right">
+            <div class="eval-cta-info-item">
+              <svg viewBox="0 0 24 24" class="eval-cta-pin-icon" aria-hidden="true">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7Z" fill="#ff5e3a"/>
+                <circle cx="12" cy="9" r="2.5" fill="white"/>
+              </svg>
+              <span>Vía Samborondón, Guayaquil</span>
+            </div>
+            <a class="eval-cta-info-item eval-cta-phone-link" href="https://wa.me/593993046031" target="_blank" rel="noopener noreferrer" aria-label="Llamar o escribir al 0993046031">
+              <div class="eval-cta-phone-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.72 11.72 0 0 0 3.68.59 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.72 11.72 0 0 0 .59 3.68 1 1 0 0 1-.24 1.02l-2.23 2.09z"/>
+                </svg>
+              </div>
+              <strong>0993046031</strong>
+            </a>
+          </div>
+        </section>
+
+        <!-- BOTÓN PARA REGRESAR / CERRAR EL APARTADO (REQUISITO 3) -->
+        <div class="subpage-bottom-actions">
+          <button type="button" class="subpage-return-btn" data-close-eval aria-label="Regresar y cerrar apartado de evaluaciones">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            <span>Regresar / Cerrar apartado</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUBPÁGINA MODAL / VISTA DETALLE DE TERAPIAS -->
+  <div class="terapias-subpage-backdrop" id="terapias-subpage-modal" role="dialog" aria-modal="true" aria-labelledby="terapias-subpage-modal-title" hidden>
+    <div class="terapias-subpage-overlay-bg" data-close-terapias aria-hidden="true"></div>
+    <div class="terapias-subpage-sheet" role="document">
+      <header class="terapias-subpage-header">
+        <button class="terapias-back-btn" id="close-terapias-subpage" data-close-terapias aria-label="Volver al inicio">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="terapias-back-arrow">
+            <path d="M19 12H5M12 19l-7-7 7-7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Volver al inicio</span>
+        </button>
+        <div class="terapias-subpage-badge">
+          <span class="eyebrow-dot" aria-hidden="true"></span>
+          <span>TERAPIAS · RYE</span>
+        </div>
+        <button class="terapias-close-x" data-close-terapias aria-label="Cerrar vista de terapias">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18 6 6 18M6 6l12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </header>
+
+      <div class="terapias-subpage-content">
+        <!-- SECCIÓN 1: CUATRO TARJETAS DE TERAPIA AJUSTADAS SIN DESBORDES -->
+        <section class="terapias-subpage-cards-grid" aria-label="Tipos de terapia">
+          <!-- TARJETA 1: TERAPIA PSICOPEDAGÓGICA -->
+          <article class="terapia-service-card terapia-card-peach">
+            <div class="terapia-service-card-top">
+              <div class="terapia-icon-circle terapia-icon-peach" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                </svg>
+              </div>
+              <div class="terapia-service-header-text">
+                <span class="terapia-age-kicker terapia-kicker-peach">DE 3 A 18 AÑOS</span>
+                <h3 class="terapia-service-title">Terapia psicopedagógica</h3>
+              </div>
+            </div>
+            <p class="terapia-service-desc">
+              Superamos barreras de aprendizaje en lectura, escritura y matemáticas con métodos lúdicos y estrategias individualizadas.
+            </p>
+            <div class="terapia-tags-row" aria-label="Enfoques clave">
+              <span class="terapia-tag terapia-tag-peach">Lectoescritura</span>
+              <span class="terapia-tag terapia-tag-peach">Razonamiento lógico</span>
+              <span class="terapia-tag terapia-tag-peach">Técnicas de estudio</span>
+            </div>
+          </article>
+
+          <!-- TARJETA 2: TERAPIA COGNITIVA Y FUNCIONES EJECUTIVAS -->
+          <article class="terapia-service-card terapia-card-blue">
+            <div class="terapia-service-card-top">
+              <div class="terapia-icon-circle terapia-icon-blue" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 4.5a2.5 2.5 0 0 0-4.96-.46 2.5 2.5 0 0 0-1.98 3 2.5 2.5 0 0 0-1.32 4.24 3 3 0 0 0 .34 5.58 2.5 2.5 0 0 0 2.96 3.08A2.5 2.5 0 0 0 12 19.5"/>
+                  <path d="M12 4.5a2.5 2.5 0 0 1 4.96-.46 2.5 2.5 0 0 1 1.98 3 2.5 2.5 0 0 1 1.32 4.24 3 3 0 0 1-.34 5.58 2.5 2.5 0 0 1-2.96 3.08A2.5 2.5 0 0 1 12 19.5"/>
+                  <path d="M12 4.5v15"/>
+                  <path d="M9 10a2 2 0 0 0-2 2"/>
+                  <path d="M15 10a2 2 0 0 1 2 2"/>
+                  <path d="M9 15a2 2 0 0 0 2 1.5"/>
+                  <path d="M15 15a2 2 0 0 1-2 1.5"/>
+                </svg>
+              </div>
+              <div class="terapia-service-header-text">
+                <span class="terapia-age-kicker terapia-kicker-blue">NIÑOS, JÓVENES Y ADULTOS</span>
+                <h3 class="terapia-service-title">Terapia neurocognitiva</h3>
+              </div>
+            </div>
+            <p class="terapia-service-desc">
+              Estimulamos la memoria de trabajo, la atención sostenida, la planificación y la autorregulación en casos de TDAH o dificultades ejecutivas.
+            </p>
+            <div class="terapia-tags-row" aria-label="Enfoques clave">
+              <span class="terapia-tag terapia-tag-blue">Atención sostenida</span>
+              <span class="terapia-tag terapia-tag-blue">Memoria operativa</span>
+              <span class="terapia-tag terapia-tag-blue">Control de impulsos</span>
+            </div>
+          </article>
+
+          <!-- TARJETA 3: MÉTODO TOMATIS® -->
+          <article class="terapia-service-card terapia-card-green">
+            <div class="terapia-service-card-top">
+              <div class="terapia-icon-circle terapia-icon-green" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
+                  <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
+                  <path d="M12 12v3M9 13.5v1.5M15 13.5v1.5"/>
+                </svg>
+              </div>
+              <div class="terapia-service-header-text">
+                <span class="terapia-age-kicker terapia-kicker-green">TECNOLOGÍA INTERNACIONAL</span>
+                <h3 class="terapia-service-title">Estimulación Neuroauditiva Tomatis®</h3>
+              </div>
+            </div>
+            <p class="terapia-service-desc">
+              Tecnología que reeduca la escucha y entrena los circuitos auditivos y vestibulares para potenciar la concentración, el lenguaje, la motricidad y la calma emocional.
+            </p>
+            <div class="terapia-tags-row" aria-label="Enfoques clave">
+              <span class="terapia-tag terapia-tag-green">Procesamiento auditivo</span>
+              <span class="terapia-tag terapia-tag-green">Lenguaje y comunicación</span>
+              <span class="terapia-tag terapia-tag-green">Regulación sensorial</span>
+            </div>
+          </article>
+
+          <!-- TARJETA 4: ACOMPAÑAMIENTO EMOCIONAL Y SOCIAL -->
+          <article class="terapia-service-card terapia-card-warm">
+            <div class="terapia-service-card-top">
+              <div class="terapia-icon-circle terapia-icon-warm" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                </svg>
+              </div>
+              <div class="terapia-service-header-text">
+                <span class="terapia-age-kicker terapia-kicker-warm">BIENESTAR Y CONFIANZA</span>
+                <h3 class="terapia-service-title">Acompañamiento socioemocional</h3>
+              </div>
+            </div>
+            <p class="terapia-service-desc">
+              Espacio empático y estructurado para gestionar la frustración, afianzar la autoestima, reducir la ansiedad y favorecer la integración social armónica.
+            </p>
+            <div class="terapia-tags-row" aria-label="Enfoques clave">
+              <span class="terapia-tag terapia-tag-warm">Gestión emocional</span>
+              <span class="terapia-tag terapia-tag-warm">Habilidades sociales</span>
+              <span class="terapia-tag terapia-tag-warm">Seguridad personal</span>
+            </div>
+          </article>
+        </section>
+
+        <!-- SECCIÓN 2: ¿CUÁNDO CONSIDERAR INICIAR UNA TERAPIA? -->
+        <section class="terapia-when-section" aria-labelledby="terapia-when-title">
+          <h3 id="terapia-when-title" class="eval-section-heading">¿Cuándo considerar iniciar una terapia?</h3>
+          <div class="eval-when-grid">
+            <div class="eval-when-item">
+              <div class="eval-check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="#f25345" stroke-width="2.2"/>
+                  <path d="m8 12 2.8 2.8L16 9.5" stroke="#f25345" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <p>Notas rezago o desmotivación constante frente a las exigencias académicas.</p>
+            </div>
+            <div class="eval-when-item">
+              <div class="eval-check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="#f25345" stroke-width="2.2"/>
+                  <path d="m8 12 2.8 2.8L16 9.5" stroke="#f25345" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <p>Hay dificultades frecuentes para enfocar la atención, organizarse o terminar tareas.</p>
+            </div>
+            <div class="eval-when-item">
+              <div class="eval-check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="#f25345" stroke-width="2.2"/>
+                  <path d="m8 12 2.8 2.8L16 9.5" stroke="#f25345" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <p>Deseas mejorar la escucha, la fluidez del habla o la coordinación psicomotriz.</p>
+            </div>
+            <div class="eval-when-item">
+              <div class="eval-check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="#f25345" stroke-width="2.2"/>
+                  <path d="m8 12 2.8 2.8L16 9.5" stroke="#f25345" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <p>Buscas orientación para apoyar el equilibrio emocional y la convivencia familiar.</p>
+            </div>
+          </div>
+          <p class="eval-reassurance-note">
+            Cada niño y joven tiene su momento. Diseñamos un plan terapéutico específico para cada realidad familiar.
+          </p>
+        </section>
+
+        <!-- SECCIÓN 3: ASÍ TE ACOMPAÑAMOS EN EL PROCESO TERAPÉUTICO -->
+        <section class="eval-process-section" aria-labelledby="terapia-process-title">
+          <h3 id="terapia-process-title" class="eval-section-heading">Así te acompañamos en el proceso terapéutico</h3>
+          <div class="eval-process-steps">
+            <div class="eval-step-item">
+              <div class="eval-step-number" aria-hidden="true">01</div>
+              <div class="eval-step-body">
+                <h4 class="eval-step-title">Definición de objetivos</h4>
+                <p class="eval-step-desc">Identificamos prioridades y trazamos metas claras y medibles junto a la familia.</p>
+              </div>
+            </div>
+            <div class="eval-step-divider" aria-hidden="true"></div>
+            <div class="eval-step-item">
+              <div class="eval-step-number" aria-hidden="true">02</div>
+              <div class="eval-step-body">
+                <h4 class="eval-step-title">Intervención personalizada</h4>
+                <p class="eval-step-desc">Sesiones dinámicas, estructuradas y motivadoras adaptadas a sus necesidades.</p>
+              </div>
+            </div>
+            <div class="eval-step-divider" aria-hidden="true"></div>
+            <div class="eval-step-item">
+              <div class="eval-step-number" aria-hidden="true">03</div>
+              <div class="eval-step-body">
+                <h4 class="eval-step-title">Acompañamiento integral</h4>
+                <p class="eval-step-desc">Coordinación constante con el colegio y pautas prácticas para el hogar.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECCIÓN 4: BANNER FINAL ¿BUSCAS APOYO TERAPÉUTICO? -->
+        <section class="eval-cta-card" aria-label="Orientación de terapias">
+          <div class="eval-cta-decor-circle eval-cta-circle-1" aria-hidden="true"></div>
+          <div class="eval-cta-decor-circle eval-cta-circle-2" aria-hidden="true"></div>
+          <div class="eval-cta-left">
+            <h3 class="eval-cta-title">¿Quieres saber qué terapia es ideal?</h3>
+            <p class="eval-cta-subtitle">Conversemos sobre tu caso y te orientamos con calidez y rigor profesional.</p>
+            <a class="eval-cta-whatsapp-btn" href="https://wa.me/593993046031?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20las%20terapias%20de%20RYE" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" class="eval-cta-wa-icon" aria-hidden="true">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 20.15C10.57 20.15 9.12 19.75 7.85 19L7.55 18.82L4.43 19.64L5.26 16.6L5.06 16.29C4.24 14.98 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.05 20.15ZM16.57 14.39C16.32 14.27 15.11 13.67 14.89 13.58C14.66 13.5 14.5 13.46 14.33 13.71C14.16 13.96 13.69 14.51 13.54 14.68C13.4 14.84 13.25 14.86 13 14.74C12.75 14.61 11.96 14.35 11.02 13.52C10.29 12.87 9.8 12.07 9.66 11.82C9.51 11.58 9.64 11.44 9.77 11.31C9.88 11.2 10.02 11.02 10.15 10.87C10.27 10.72 10.31 10.62 10.39 10.45C10.48 10.29 10.43 10.14 10.37 10.02C10.31 9.9 9.82 8.69 9.61 8.2C9.41 7.71 9.21 7.78 9.06 7.77C8.92 7.76 8.75 7.76 8.59 7.76C8.42 7.76 8.16 7.82 7.93 8.07C7.71 8.32 7.07 8.91 7.07 10.13C7.07 11.35 7.96 12.52 8.08 12.69C8.21 12.85 9.82 15.34 12.3 16.4C12.89 16.65 13.35 16.81 13.71 16.92C14.3 17.11 14.84 17.08 15.27 17.02C15.74 16.95 16.73 16.42 16.94 15.84C17.15 15.25 17.15 14.75 17.08 14.64C17.02 14.53 16.82 14.51 16.57 14.39Z" fill="currentColor"/>
+              </svg>
+              <span>Consultar terapias por WhatsApp</span>
+              <span class="eval-cta-chevron" aria-hidden="true">›</span>
+            </a>
+          </div>
+          <div class="eval-cta-divider" aria-hidden="true"></div>
+          <div class="eval-cta-right">
+            <div class="eval-cta-info-item">
+              <svg viewBox="0 0 24 24" class="eval-cta-pin-icon" aria-hidden="true">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7Z" fill="#ff5e3a"/>
+                <circle cx="12" cy="9" r="2.5" fill="white"/>
+              </svg>
+              <span>Vía Samborondón, Guayaquil</span>
+            </div>
+            <a class="eval-cta-info-item eval-cta-phone-link" href="https://wa.me/593993046031" target="_blank" rel="noopener noreferrer" aria-label="Llamar o escribir al 0993046031">
+              <div class="eval-cta-phone-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.72 11.72 0 0 0 3.68.59 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.72 11.72 0 0 0 .59 3.68 1 1 0 0 1-.24 1.02l-2.23 2.09z"/>
+                </svg>
+              </div>
+              <strong>0993046031</strong>
+            </a>
+          </div>
+        </section>
+
+        <!-- BOTÓN PARA REGRESAR / CERRAR EL APARTADO (REQUISITO 3) -->
+        <div class="subpage-bottom-actions">
+          <button type="button" class="subpage-return-btn" data-close-terapias aria-label="Regresar y cerrar apartado de terapias">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            <span>Regresar / Cerrar apartado</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUBPÁGINA MODAL / VISTA DETALLE DE TALLERES -->
+  <div class="talleres-subpage-backdrop" id="talleres-subpage-modal" role="dialog" aria-modal="true" aria-labelledby="talleres-subpage-modal-title" hidden>
+    <div class="talleres-subpage-overlay-bg" data-close-talleres aria-hidden="true"></div>
+    <div class="talleres-subpage-sheet" role="document">
+      <header class="talleres-subpage-header">
+        <button class="talleres-back-btn" id="close-talleres-subpage" data-close-talleres aria-label="Volver al inicio">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="talleres-back-arrow">
+            <path d="M19 12H5M12 19l-7-7 7-7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Volver al inicio</span>
+        </button>
+        <div class="talleres-subpage-badge">
+          <span class="eyebrow-dot" aria-hidden="true"></span>
+          <span>TALLERES · RYE</span>
+        </div>
+        <button class="talleres-close-x" data-close-talleres aria-label="Cerrar vista de talleres">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18 6 6 18M6 6l12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </header>
+
+      <div class="talleres-subpage-content">
+        <!-- SECCIÓN 1: DOS TARJETAS DE TALLERES (TÉCNICAS DE ESTUDIO E INTELIGENCIA EMOCIONAL) -->
+        <section class="talleres-subpage-cards-grid" id="talleres-cards-container" aria-label="Talleres disponibles">
+          <!-- TARJETA 1: TÉCNICAS DE ESTUDIO Y ORGANIZACIÓN -->
+          <article class="taller-service-card taller-card-blue" id="taller-card-estudio">
+            <div class="taller-service-card-top">
+              <div class="taller-icon-circle taller-icon-blue" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/>
+                  <path d="M6 6h10M6 10h10M6 14h6"/>
+                </svg>
+              </div>
+              <div class="taller-service-header-text">
+                <span class="taller-age-kicker taller-kicker-blue">Educación Básica, bachillerato y Universidad</span>
+                <h3 class="taller-service-title">Técnicas de estudio y organización</h3>
+              </div>
+            </div>
+            <p class="taller-service-desc">
+              Estrategias prácticas para aprender a organizar el tiempo, resumir información clave, preparar exámenes y ganar autonomía en los deberes.
+            </p>
+            <div class="taller-tags-row" aria-label="Contenido del taller">
+              <span class="taller-tag taller-tag-blue">Gestión del tiempo</span>
+              <span class="taller-tag taller-tag-blue">Mapas mentales</span>
+              <span class="taller-tag taller-tag-blue">Estrategias de examen</span>
+            </div>
+          </article>
+
+          <!-- TARJETA 2: INTELIGENCIA EMOCIONAL Y AUTORREGULACIÓN -->
+          <article class="taller-service-card taller-card-peach" id="taller-card-emocional">
+            <div class="taller-service-card-top">
+              <div class="taller-icon-circle taller-icon-peach" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9.5 2a4.5 4.5 0 0 0-4.5 4.5c0 1.2.5 2.3 1.3 3.1A4.5 4.5 0 0 0 8 18h1.5"/>
+                  <path d="M14.5 2a4.5 4.5 0 0 1 4.5 4.5c0 1.2-.5 2.3-1.3 3.1A4.5 4.5 0 0 1 16 18h-1.5"/>
+                  <path d="M12 2v18"/>
+                  <path d="M12 7.5a2 2 0 0 1 2 2c0 1.5-2 3-2 3s-2-1.5-2-3a2 2 0 0 1 2-2z" fill="currentColor"/>
+                </svg>
+              </div>
+              <div class="taller-service-header-text">
+                <span class="taller-age-kicker taller-kicker-peach">DE 8 A 17 AÑOS</span>
+                <h3 class="taller-service-title">Inteligencia emocional y autorregulación</h3>
+              </div>
+            </div>
+            <p class="taller-service-desc">
+              Espacio lúdico y formativo para identificar emociones, reducir el estrés escolar, manejar la frustración y fomentar la seguridad personal.
+            </p>
+            <div class="taller-tags-row" aria-label="Contenido del taller">
+              <span class="taller-tag taller-tag-peach">Manejo de la frustración</span>
+              <span class="taller-tag taller-tag-peach">Calma y foco</span>
+              <span class="taller-tag taller-tag-peach">Autoestima</span>
+            </div>
+          </article>
+        </section>
+
+        <!-- SECCIÓN 2: ¿POR QUÉ PARTICIPAR EN LOS TALLERES DE RYE? -->
+        <section class="taller-why-section" aria-labelledby="taller-why-title">
+          <h3 id="taller-why-title" class="eval-section-heading">¿Por qué participar en los talleres de RYE?</h3>
+          <div class="eval-when-grid">
+            <div class="eval-when-item">
+              <div class="eval-check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="#f25345" stroke-width="2.2"/>
+                  <path d="m8 12 2.8 2.8L16 9.5" stroke="#f25345" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <p>Grupos reducidos para garantizar un acompañamiento cercano y personalizado.</p>
+            </div>
+            <div class="eval-when-item">
+              <div class="eval-check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="#f25345" stroke-width="2.2"/>
+                  <path d="m8 12 2.8 2.8L16 9.5" stroke="#f25345" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <p>Metodología 100% práctica, interactiva y con herramientas de aplicación inmediata.</p>
+            </div>
+            <div class="eval-when-item">
+              <div class="eval-check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="#f25345" stroke-width="2.2"/>
+                  <path d="m8 12 2.8 2.8L16 9.5" stroke="#f25345" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <p>Especialistas con más de 20 años de experiencia guiando a familias en Ecuador.</p>
+            </div>
+            <div class="eval-when-item">
+              <div class="eval-check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="#f25345" stroke-width="2.2"/>
+                  <path d="m8 12 2.8 2.8L16 9.5" stroke="#f25345" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <p>Ambiente seguro, empático y motivador que despierta las ganas de aprender.</p>
+            </div>
+          </div>
+          <p class="eval-reassurance-note">
+            Aprender juntos multiplica la confianza y fortalece habilidades para toda la vida.
+          </p>
+        </section>
+
+        <!-- SECCIÓN 3: CÓMO SE DESARROLLAN NUESTROS TALLERES -->
+        <section class="eval-process-section" aria-labelledby="taller-process-title">
+          <h3 id="taller-process-title" class="eval-section-heading">Cómo se desarrollan nuestros talleres</h3>
+          <div class="eval-process-steps">
+            <div class="eval-step-item">
+              <div class="eval-step-number" aria-hidden="true">01</div>
+              <div class="eval-step-body">
+                <h4 class="eval-step-title">Inscripción y grupo afín</h4>
+                <p class="eval-step-desc">Ubicamos a cada participante según su edad, intereses y necesidades particulares.</p>
+              </div>
+            </div>
+            <div class="eval-step-divider" aria-hidden="true"></div>
+            <div class="eval-step-item">
+              <div class="eval-step-number" aria-hidden="true">02</div>
+              <div class="eval-step-body">
+                <h4 class="eval-step-title">Sesiones vivenciales</h4>
+                <p class="eval-step-desc">Ejercicios prácticos, casos reales y dinámicas que afianzan el aprendizaje de forma amena.</p>
+              </div>
+            </div>
+            <div class="eval-step-divider" aria-hidden="true"></div>
+            <div class="eval-step-item">
+              <div class="eval-step-number" aria-hidden="true">03</div>
+              <div class="eval-step-body">
+                <h4 class="eval-step-title">Seguimiento y orientación</h4>
+                <p class="eval-step-desc">Compartimos conclusiones y pautas concretas para continuar practicando en casa.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECCIÓN 4: BANNER FINAL ¿QUIERES CONOCER PRÓXIMAS FECHAS? -->
+        <section class="eval-cta-card" aria-label="Información de talleres">
+          <div class="eval-cta-decor-circle eval-cta-circle-1" aria-hidden="true"></div>
+          <div class="eval-cta-decor-circle eval-cta-circle-2" aria-hidden="true"></div>
+          <div class="eval-cta-left">
+            <h3 class="eval-cta-title">¿Quieres conocer fechas y horarios?</h3>
+            <p class="eval-cta-subtitle">Consúltanos sin compromiso y te enviamos el calendario y cupos disponibles.</p>
+            <a class="eval-cta-whatsapp-btn" href="https://wa.me/593993046031?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20los%20pr%C3%B3ximos%20talleres%20de%20RYE" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" class="eval-cta-wa-icon" aria-hidden="true">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 20.15C10.57 20.15 9.12 19.75 7.85 19L7.55 18.82L4.43 19.64L5.26 16.6L5.06 16.29C4.24 14.98 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.05 20.15ZM16.57 14.39C16.32 14.27 15.11 13.67 14.89 13.58C14.66 13.5 14.5 13.46 14.33 13.71C14.16 13.96 13.69 14.51 13.54 14.68C13.4 14.84 13.25 14.86 13 14.74C12.75 14.61 11.96 14.35 11.02 13.52C10.29 12.87 9.8 12.07 9.66 11.82C9.51 11.58 9.64 11.44 9.77 11.31C9.88 11.2 10.02 11.02 10.15 10.87C10.27 10.72 10.31 10.62 10.39 10.45C10.48 10.29 10.43 10.14 10.37 10.02C10.31 9.9 9.82 8.69 9.61 8.2C9.41 7.71 9.21 7.78 9.06 7.77C8.92 7.76 8.75 7.76 8.59 7.76C8.42 7.76 8.16 7.82 7.93 8.07C7.71 8.32 7.07 8.91 7.07 10.13C7.07 11.35 7.96 12.52 8.08 12.69C8.21 12.85 9.82 15.34 12.3 16.4C12.89 16.65 13.35 16.81 13.71 16.92C14.3 17.11 14.84 17.08 15.27 17.02C15.74 16.95 16.73 16.42 16.94 15.84C17.15 15.25 17.15 14.75 17.08 14.64C17.02 14.53 16.82 14.51 16.57 14.39Z" fill="currentColor"/>
+              </svg>
+              <span>Consultar próximos talleres por WhatsApp</span>
+              <span class="eval-cta-chevron" aria-hidden="true">›</span>
+            </a>
+          </div>
+          <div class="eval-cta-divider" aria-hidden="true"></div>
+          <div class="eval-cta-right">
+            <div class="eval-cta-info-item">
+              <svg viewBox="0 0 24 24" class="eval-cta-pin-icon" aria-hidden="true">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7Z" fill="#ff5e3a"/>
+                <circle cx="12" cy="9" r="2.5" fill="white"/>
+              </svg>
+              <span>Vía Samborondón, Guayaquil</span>
+            </div>
+            <a class="eval-cta-info-item eval-cta-phone-link" href="https://wa.me/593993046031" target="_blank" rel="noopener noreferrer" aria-label="Llamar o escribir al 0993046031">
+              <div class="eval-cta-phone-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.72 11.72 0 0 0 3.68.59 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.72 11.72 0 0 0 .59 3.68 1 1 0 0 1-.24 1.02l-2.23 2.09z"/>
+                </svg>
+              </div>
+              <strong>0993046031</strong>
+            </a>
+          </div>
+        </section>
+
+        <!-- BOTÓN PARA REGRESAR / CERRAR EL APARTADO (REQUISITO 3) -->
+        <div class="subpage-bottom-actions">
+          <button type="button" class="subpage-return-btn" data-close-talleres aria-label="Regresar y cerrar apartado de talleres">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            <span>Regresar / Cerrar apartado</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUBPÁGINA MODAL INDEPENDIENTE DE SERVICIOS -->
+  <div class="servicios-subpage-backdrop" id="servicios-subpage-modal" role="dialog" aria-modal="true" aria-labelledby="servicio-modal-badge-text" hidden>
+    <div class="servicios-subpage-overlay-bg" data-close-servicio aria-hidden="true"></div>
+    <div class="servicios-subpage-sheet" role="document">
+      <header class="servicios-subpage-header">
+        <button class="servicios-back-btn" id="close-servicio-subpage" data-close-servicio aria-label="Volver a servicios">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="servicios-back-arrow">
+            <path d="M19 12H5M12 19l-7-7 7-7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Volver a servicios</span>
+        </button>
+        <div class="servicios-subpage-badge">
+          <span class="eyebrow-dot" aria-hidden="true"></span>
+          <span id="servicio-modal-badge-text">SERVICIOS · RYE</span>
+        </div>
+        <button class="servicios-close-x" data-close-servicio aria-label="Cerrar subsección">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18 6 6 18M6 6l12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </header>
+
+      <div class="servicios-subpage-content">
+        <!-- SELECTOR DE SERVICIOS INDEPENDIENTES -->
+        <div class="servicios-tabs-bar" role="tablist" aria-label="Cambiar entre servicios">
+          <button type="button" class="servicio-tab-pill is-active" data-tab-service="tomatis">Método Tomatis®</button>
+          <button type="button" class="servicio-tab-pill" data-tab-service="vocacional">Orientación Vocacional</button>
+          <button type="button" class="servicio-tab-pill" data-tab-service="familiar">Asesoramiento Familiar</button>
+          <button type="button" class="servicio-tab-pill" data-tab-service="capacitaciones">Capacitaciones</button>
+          <button type="button" class="servicio-tab-pill" data-tab-service="ocupacional">Terapia Ocupacional</button>
+        </div>
+
+        <!-- PANEL 1: MÉTODO TOMATIS® -->
+        <article class="servicio-detail-card servicio-subpage-panel" id="panel-servicio-tomatis" hidden>
+          <div class="servicio-detail-grid">
+            <div class="servicio-detail-media">
+              <img src="assets/clinic_tomatis.jpg" alt="Equipos y sala del Método Tomatis en RYE" class="servicio-detail-img" loading="lazy" width="800" height="520">
+              <div class="servicio-badge-chip">MÉTODO TOMATIS®</div>
+            </div>
+            <div class="servicio-detail-info">
+              <span class="servicio-detail-kicker">ESTIMULACIÓN NEUROSENSORIAL</span>
+              <h3 class="servicio-detail-heading">Método Tomatis®</h3>
+              <p class="servicio-detail-lead">
+                Estimulación neurosensorial a través de programas de escucha activa y personalizada.
+              </p>
+              <p class="servicio-detail-text">
+                El Método Tomatis® emplea programas de escucha en los que la música y la voz son modificadas acústicamente con la finalidad de estimular diferentes capacidades del neurodesarrollo y la atención.
+              </p>
+              
+              <div class="servicio-features-block">
+                <h4 class="servicio-features-title">Áreas de aplicación frecuentes:</h4>
+                <div class="servicio-pills-wrap">
+                  <span class="servicio-pill">Área emocional</span>
+                  <span class="servicio-pill">Dificultades de lenguaje</span>
+                  <span class="servicio-pill">Trastornos del desarrollo</span>
+                  <span class="servicio-pill">Condición del Espectro Autista (TEA)</span>
+                  <span class="servicio-pill">Estimulación cognitiva en adultos</span>
+                </div>
+              </div>
+
+              <div class="servicio-audience-box">
+                <div class="audience-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="7" r="4"/><path d="M5.5 21a6.5 6.5 0 0 1 13 0"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong>¿Para quién?</strong>
+                  <p>Atención desde los 3 hasta los 99 años de edad.</p>
+                </div>
+              </div>
+
+              <div class="servicio-guidance-note">
+                <strong>¿Cómo saber si corresponde?</strong>
+                <p>Si no sabes si el Método Tomatis® es adecuado para tu caso, cuéntanos qué está ocurriendo y podremos orientarte.</p>
+              </div>
+
+              <div class="servicio-detail-actions">
+                <a href="https://wa.me/593993046031?text=Hola%2C%20quisiera%20consultar%20sobre%20el%20M%C3%A9todo%20Tomatis%C2%AE%20en%20RYE" target="_blank" rel="noopener noreferrer" class="servicio-whatsapp-cta">
+                  <svg viewBox="0 0 24 24" class="servicios-wa-svg" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z" fill="currentColor"/></svg>
+                  <span>Consultar sobre Método Tomatis®</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- PANEL 2: ORIENTACIÓN VOCACIONAL Y PROFESIONAL -->
+        <article class="servicio-detail-card servicio-subpage-panel" id="panel-servicio-vocacional" hidden>
+          <div class="servicio-detail-grid">
+            <div class="servicio-detail-media">
+              <img src="assets/vocacional_banner.jpg" alt="Acompañamiento vocacional para jóvenes y adolescentes" class="servicio-detail-img" loading="lazy" width="800" height="520">
+              <div class="servicio-badge-chip">PLAN DE VIDA Y CARRERA</div>
+            </div>
+            <div class="servicio-detail-info">
+              <span class="servicio-detail-kicker">FUTURO ACADÉMICO Y PROFESIONAL</span>
+              <h3 class="servicio-detail-heading">Orientación Vocacional y Profesional</h3>
+              <p class="servicio-detail-lead">
+                Elegir una carrera no consiste solamente en elegir qué estudiar; es proyectar quién quieres ser.
+              </p>
+              <p class="servicio-detail-text">
+                El proceso busca ayudar a adolescentes y jóvenes a tomar decisiones fundamentadas, conociendo a fondo su perfil de talentos, estilos de aprendizaje y aspiraciones vitales.
+              </p>
+              
+              <div class="servicio-aspects-grid">
+                <div class="aspect-item">
+                  <div class="aspect-icon" aria-hidden="true">💡</div>
+                  <div>
+                    <strong>Intereses</strong>
+                    <p>¿Qué áreas y actividades despiertan mayor curiosidad y pasión?</p>
+                  </div>
+                </div>
+                <div class="aspect-item">
+                  <div class="aspect-icon" aria-hidden="true">🎯</div>
+                  <div>
+                    <strong>Aptitudes</strong>
+                    <p>¿En qué tipos de destrezas muestra habilidades sobresalientes?</p>
+                  </div>
+                </div>
+                <div class="aspect-item">
+                  <div class="aspect-icon" aria-hidden="true">🌱</div>
+                  <div>
+                    <strong>Personalidad</strong>
+                    <p>¿Qué características personales influyen en sus decisiones y bienestar?</p>
+                  </div>
+                </div>
+                <div class="aspect-item">
+                  <div class="aspect-icon" aria-hidden="true">🧩</div>
+                  <div>
+                    <strong>Inteligencias</strong>
+                    <p>¿Qué estilos cognitivos y formas de razonamiento lo definen?</p>
+                  </div>
+                </div>
+                <div class="aspect-item aspect-span-full">
+                  <div class="aspect-icon" aria-hidden="true">🧭</div>
+                  <div>
+                    <strong>Plan de Vida</strong>
+                    <p>¿Cómo conecta su elección con lo que anhela construir a mediano y largo plazo?</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="servicio-audience-box">
+                <div class="audience-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong>¿Para quién?</strong>
+                  <p>Adolescentes y jóvenes que están explorando opciones académicas o profesionales y quieren tomar una decisión informada.</p>
+                </div>
+              </div>
+
+              <div class="servicio-detail-actions">
+                <a href="https://wa.me/593993046031?text=Hola%2C%20quisiera%20consultar%20sobre%20orientaci%C3%B3n%20vocacional%20y%20profesional%20en%20RYE" target="_blank" rel="noopener noreferrer" class="servicio-whatsapp-cta">
+                  <svg viewBox="0 0 24 24" class="servicios-wa-svg" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z" fill="currentColor"/></svg>
+                  <span>Consultar sobre orientación vocacional</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- PANEL 3: ASESORAMIENTO FAMILIAR Y DE PAREJA -->
+        <article class="servicio-detail-card servicio-subpage-panel" id="panel-servicio-familiar" hidden>
+          <div class="servicio-detail-grid">
+            <div class="servicio-detail-media">
+              <img src="assets/familiar_banner.jpg" alt="Sesión de asesoramiento familiar y de pareja en RYE" class="servicio-detail-img" loading="lazy" width="800" height="520">
+              <div class="servicio-badge-chip">ORIENTACIÓN FAMILIAR</div>
+            </div>
+            <div class="servicio-detail-info">
+              <span class="servicio-detail-kicker">EDUCACIÓN Y CONVIVENCIA</span>
+              <h3 class="servicio-detail-heading">Asesoramiento Educativo Familiar y de Pareja</h3>
+              <p class="servicio-detail-lead">
+                Herramientas prácticas para afrontar los desafíos que aparecen dentro del entorno familiar.
+              </p>
+              <p class="servicio-detail-text">
+                El servicio proporciona herramientas a padres y madres para apoyar la formación de sus hijos, facilitando además un acompañamiento empático frente a momentos de tensión en la convivencia o la relación de pareja.
+              </p>
+
+              <div class="servicio-areas-list">
+                <div class="area-row-item">
+                  <div class="area-bullet" aria-hidden="true"></div>
+                  <div>
+                    <strong>Orientación a padres:</strong>
+                    <p>Pautas educativas para afrontar límites, hábitos de estudio, autonomía y desarrollo emocional en cada edad.</p>
+                  </div>
+                </div>
+                <div class="area-row-item">
+                  <div class="area-bullet" aria-hidden="true"></div>
+                  <div>
+                    <strong>Dinámica familiar:</strong>
+                    <p>Estrategias de comunicación respetuosa ante dificultades que afectan la convivencia y el entendimiento cotidiano.</p>
+                  </div>
+                </div>
+                <div class="area-row-item">
+                  <div class="area-bullet" aria-hidden="true"></div>
+                  <div>
+                    <strong>Relación de pareja:</strong>
+                    <p>Espacio de escucha y acuerdos mutuos para alinear la crianza y fortalecer el vínculo familiar.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="servicio-detail-actions">
+                <a href="https://wa.me/593993046031?text=Hola%2C%20quisiera%20consultar%20sobre%20asesoramiento%20familiar%20y%20de%20pareja%20en%20RYE" target="_blank" rel="noopener noreferrer" class="servicio-whatsapp-cta">
+                  <svg viewBox="0 0 24 24" class="servicios-wa-svg" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z" fill="currentColor"/></svg>
+                  <span>Consultar sobre asesoramiento familiar</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- PANEL 4: ASESORAMIENTO Y CAPACITACIONES INSTITUCIONALES -->
+        <article class="servicio-detail-card servicio-subpage-panel" id="panel-servicio-capacitaciones" hidden>
+          <div class="servicio-detail-grid">
+            <div class="servicio-detail-media">
+              <img src="assets/capacitaciones_banner.jpg" alt="Capacitaciones y talleres institucionales de RYE para instituciones educativas y empresas" class="servicio-detail-img" loading="lazy" width="800" height="520">
+              <div class="servicio-badge-chip">ÁMBITO EDUCATIVO Y EMPRESARIAL</div>
+            </div>
+            <div class="servicio-detail-info">
+              <span class="servicio-detail-kicker">FORMACIÓN CONTINUA Y TALLERES</span>
+              <h3 class="servicio-detail-heading">Asesoramiento y Capacitaciones Institucionales</h3>
+              <p class="servicio-detail-lead">
+                La experiencia y conocimiento multidisciplinario de RYE adaptados a grupos, centros educativos y organizaciones.
+              </p>
+              <p class="servicio-detail-text">
+                Diseñamos e impartimos charlas, talleres vivenciales y seminarios de actualización profesional en los ámbitos educativo y empresarial con herramientas científicas y pedagógicas de aplicación inmediata.
+              </p>
+
+              <div class="servicio-target-groups">
+                <div class="target-group-card">
+                  <div class="target-group-badge">SECTOR EDUCATIVO</div>
+                  <strong>Instituciones educativas:</strong>
+                  <p>Instituciones educativas, centros infantiles y comunidades de docentes y psicólogos que buscan actualizarse en neuroeducación e inclusión.</p>
+                </div>
+                <div class="target-group-card">
+                  <div class="target-group-badge">SECTOR ORGANIZACIONAL</div>
+                  <strong>Empresas y organizaciones:</strong>
+                  <p>Equipos profesionales interesados en talleres de gestión del estrés, inteligencia emocional, liderazgo y habilidades humanas.</p>
+                </div>
+              </div>
+
+              <div class="servicio-detail-actions">
+                <a href="https://wa.me/593993046031?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20capacitaciones%20institucionales%20de%20RYE" target="_blank" rel="noopener noreferrer" class="servicio-whatsapp-cta">
+                  <svg viewBox="0 0 24 24" class="servicios-wa-svg" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z" fill="currentColor"/></svg>
+                  <span>Consultar una capacitación institucional</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- PANEL 5: TERAPIA OCUPACIONAL (REQUISITO 13) -->
+        <article class="servicio-detail-card servicio-subpage-panel" id="panel-servicio-ocupacional" hidden>
+          <div class="servicio-detail-grid">
+            <div class="servicio-detail-media">
+              <img src="assets/clinic_recepcion.jpg" alt="Terapia ocupacional, motricidad e integración sensorial en RYE" class="servicio-detail-img" loading="lazy" width="800" height="520">
+              <div class="servicio-badge-chip">INTEGRACIÓN SENSORIAL Y AUTONOMÍA</div>
+            </div>
+            <div class="servicio-detail-info">
+              <span class="servicio-detail-kicker">DESARROLLO MOTOR Y FUNCIONAL</span>
+              <h3 class="servicio-detail-heading">Terapia Ocupacional</h3>
+              <p class="servicio-detail-lead">
+                Favorecemos la independencia y participación activa de niños y jóvenes en el hogar, la escuela y su vida cotidiana.
+              </p>
+              <p class="servicio-detail-text">
+                Intervenimos de manera lúdica y especializada en el procesamiento sensorial, la motricidad fina y gruesa, grafomotricidad, coordinación visomotora y autonomía diaria, estructurando programas individualizados para cada persona.
+              </p>
+
+              <div class="servicio-features-block">
+                <h4 class="servicio-features-title">Áreas de abordaje:</h4>
+                <div class="servicio-pills-wrap">
+                  <span class="servicio-pill">Integración sensorial</span>
+                  <span class="servicio-pill">Motricidad fina y agarre de lápiz</span>
+                  <span class="servicio-pill">Coordinación motora global</span>
+                  <span class="servicio-pill">Autonomía en actividades cotidianas</span>
+                  <span class="servicio-pill">Planificación motriz (praxias)</span>
+                </div>
+              </div>
+
+              <div class="servicio-audience-box">
+                <div class="audience-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="7" r="4"/><path d="M5.5 21a6.5 6.5 0 0 1 13 0"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong>¿Para quién está dirigida?</strong>
+                  <p>Niños y jóvenes con dificultades sensoriales, torpeza motora, retos en la escritura o que necesitan afianzar su independencia escolar y personal.</p>
+                </div>
+              </div>
+
+              <div class="servicio-detail-actions">
+                <a href="https://wa.me/593993046031?text=Hola%2C%20quisiera%20consultar%20sobre%20terapia%20ocupacional%20en%20RYE" target="_blank" rel="noopener noreferrer" class="servicio-whatsapp-cta">
+                  <svg viewBox="0 0 24 24" class="servicios-wa-svg" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z" fill="currentColor"/></svg>
+                  <span>Consultar sobre Terapia Ocupacional</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- BLOQUE DE ORIENTACIÓN AL FINAL DE LA SUBPÁGINA -->
+        <div class="servicios-help-card">
+          <div class="servicios-help-content">
+            <div class="servicios-help-badge">ORIENTACIÓN PROFESIONAL RYE</div>
+            <h3 class="servicios-help-title">¿No sabes qué servicio necesitas?</h3>
+            <p class="servicios-help-desc">
+              No tienes que identificarlo por tu cuenta. Cuéntanos brevemente qué está ocurriendo y podremos orientarte sobre el siguiente paso más adecuado para ti o tu familia.
+            </p>
+            <div class="servicios-help-action">
+              <a href="https://wa.me/593993046031?text=Hola%2C%20quisiera%20orientaci%C3%B3n%20sobre%20qu%C3%A9%20servicio%20de%20RYE%20se%20adapta%20mejor%20a%20mi%20caso" target="_blank" rel="noopener noreferrer" class="servicios-help-wa-btn">
+                <svg viewBox="0 0 24 24" class="servicios-wa-svg" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z" fill="currentColor"/></svg>
+                <span>Cuéntanos tu caso por WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- BOTÓN PARA REGRESAR / CERRAR EL APARTADO (REQUISITO 3) -->
+        <div class="subpage-bottom-actions">
+          <button type="button" class="subpage-return-btn" data-close-servicio aria-label="Regresar y cerrar apartado de servicios">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            <span>Regresar / Cerrar apartado</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
   <dialog class="contact-dialog" id="contact-dialog" aria-labelledby="contact-title">
     <button class="dialog-close" data-close aria-label="Cerrar ventana">×</button>
     <p class="dialog-kicker">RYE · DESARROLLO HUMANO</p><h2 id="contact-title">Conversemos</h2>
@@ -79,12 +1797,12 @@
     <form id="contact-form">
       <label>Tu nombre<input name="name" autocomplete="given-name" required maxlength="80" placeholder="Escribe tu nombre"></label>
       <label>Correo o teléfono<input name="contact" autocomplete="email" required maxlength="120" placeholder="¿Cómo podemos contactarte?"></label>
-      <label>Me interesa<select name="service"><option>Orientación general</option><option>Evaluaciones</option><option>Terapias</option><option>Talleres</option></select></label>
+      <label>Me interesa<select name="service"><option>Orientación general</option><option>Evaluaciones</option><option>Terapias</option><option>Talleres</option><option>Terapia Ocupacional</option></select></label>
       <label>Tu mensaje<textarea name="message" rows="3" required maxlength="1500" placeholder="Cuéntanos brevemente el motivo de tu consulta"></textarea></label>
-      <button class="submit-button" type="submit">Preparar mensaje</button>
+      <div class="dialog-actions-row"><button class="submit-button" type="submit">Preparar mensaje</button><button class="dialog-return-btn" type="button" data-close aria-label="Regresar y cerrar ventana">Regresar / Cerrar</button></div>
     </form>
-    <div id="message-result" hidden><label>Tu mensaje listo para copiar<textarea id="prepared-message" rows="7" readonly></textarea></label><button class="submit-button" id="copy-message">Copiar mensaje</button><p class="form-status" role="status" id="form-status"></p></div>
+    <div id="message-result" hidden><label>Tu mensaje listo para copiar<textarea id="prepared-message" rows="7" readonly></textarea></label><div class="dialog-actions-row"><button class="submit-button" id="copy-message">Copiar mensaje</button><button class="dialog-return-btn" type="button" data-close aria-label="Regresar y cerrar ventana">Regresar / Cerrar</button></div><p class="form-status" role="status" id="form-status"></p></div>
   </dialog>
-  <dialog class="about-dialog" id="about-dialog" aria-labelledby="about-title"><button class="dialog-close" data-close aria-label="Cerrar ventana">×</button><img src="assets/founders_rigoberto_erika.jpg" alt="Rigoberto y Erika" width="1264" height="841"><div class="about-content"><p class="dialog-kicker">RYE · DESARROLLO HUMANO</p><h2 id="about-title">Rigoberto y Erika</h2><p>Más de 20 años de experiencia. Evaluaciones, terapias y acompañamiento personalizado para cada etapa.</p><p>Kennedy Nueva, Guayaquil.</p><button class="submit-button" data-contact>Preparar una consulta</button></div></dialog>
+  <dialog class="about-dialog" id="about-dialog" aria-labelledby="about-title"><button class="dialog-close" data-close aria-label="Cerrar ventana">×</button><img src="assets/founders_rigoberto_erika.jpg" alt="Rigoberto y Erika" width="1264" height="841"><div class="about-content"><p class="dialog-kicker">RYE · DESARROLLO HUMANO</p><h2 id="about-title">Rigoberto y Erika Alvarado de Bermeo</h2><p>Más de 20 años de experiencia. Evaluaciones neuropsicológicas y psicopedagógicas, terapias, Método Tomatis® y acompañamiento personalizado.</p><p>Vía Samborondón, Guayaquil.</p><div class="dialog-actions-row"><button class="submit-button" data-contact>Preparar una consulta</button><button class="dialog-return-btn" type="button" data-close aria-label="Regresar y cerrar apartado">Regresar / Cerrar</button></div></div></dialog>
 </body>
 </html>
